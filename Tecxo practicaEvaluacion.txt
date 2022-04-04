@@ -1,0 +1,22 @@
+Catalogo quepermite ver y comentar productos.
+Separar Header y Footer de la pagina.
+
+-- Migracion
+
+Rutas. -> Index / Login / Product -> Index y Edit /Profile -> Index y Edit / Register / Search
+Controladores.
+Ejs.
+Formularios.
+Header y Footer
+
+-- Modulo de Datos
+
+Usuario. -> Email/Usuario/Contraseña/Fecha/DNI/Fto
+Producto. -> Fto/Nombre/Desc/Fecha/Comentarios 
+Comentarios ->
+
+-- Personalizacion
+
+Tema
+Tipografia
+Edit
