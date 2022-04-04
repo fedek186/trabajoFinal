@@ -13,7 +13,7 @@ Header y Footer
 
 Usuario. -> Email/Usuario/Contraseña/Fecha/DNI/Fto
 Producto. -> Fto/Nombre/Desc/Fecha/Comentarios 
-Comentarios ->
+Comentarios -> Nombre de Usuario/Texto de comentario/ Img de perfil
 
 -- Personalizacion
 
