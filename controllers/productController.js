@@ -1,10 +1,10 @@
 let productController =
 {
     index: function(req, res) {
-       res.render('../product');
+       res.render('product');
       },
-    edit : function(req, res) {
-        res.send('productEdit');
+    add : function(req, res) {
+        res.render('product-add');
        },
 };
 

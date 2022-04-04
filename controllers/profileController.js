@@ -1,10 +1,10 @@
 let profileController =
 {
     index: function(req, res) {
-       res.send('profile');
+       res.render('profile');
       },
     edit: function(req, res) {
-        res.send('profile edit');
+        res.render('profile-edit');
        },
 };
 

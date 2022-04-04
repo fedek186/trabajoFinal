@@ -3,7 +3,7 @@ Separar Header y Footer de la pagina.
 
 -- Migracion
 
-Rutas. -> Index / Login / Product -> Index y Edit /Profile -> Index y Edit / Register / Search
+Rutas. -> Index / Login / Product -> Index y Add /Profile -> Index y Edit / Register / Search
 Controladores.
 Ejs.
 Formularios.
