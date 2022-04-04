@@ -1,4 +1,4 @@
-Catalogo quepermite ver y comentar productos.
+Catalogo que permite ver y comentar productos.
 Separar Header y Footer de la pagina.
 
 -- Migracion
