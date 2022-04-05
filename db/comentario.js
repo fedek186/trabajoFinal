@@ -1,9 +1,9 @@
 const comentarios = {
     lista : [
         {
-            nombreDeUsuario : ,
-            textoDelComentario : ,
-            imagenDePerfil : ,
+            nombreDeUsuario : "hola",
+            textoDelComentario : "hola",
+            imagenDePerfil : 'alfonso.jpg',
         }
     ]
 }

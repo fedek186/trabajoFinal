@@ -8,10 +8,10 @@ let loginController =
     }
     )
 },
-    usuario: // campo tipo email
+    usuario: 'alfonso' // campo tipo email
     ,
-    contraseña: //campo de tipo contraseña,
-    recordarme://campo de tipo checkbox
+    contraseña: 12345,//campo de tipo contraseña,
+    recordarme: 'si'//campo de tipo checkbox
 };
 
 module.exports = loginController;
