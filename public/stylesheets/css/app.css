@@ -70,6 +70,10 @@ hr {
   padding: 15px 0;
   background-color: var(--yellow);
 }
+.main-header1 {
+  padding: 15px 0;
+  background-color: var(--dark-blue);
+}
 
 .main-header_home-link,
 .main-header_credit-link {
