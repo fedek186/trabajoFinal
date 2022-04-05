@@ -16,6 +16,7 @@
 </head>
 <body>
 	<!-- Header -->
+	<%- include('./partials/header.ejs') %>
 	<!-- /Header -->
 	
 	<!-- product detail -->
@@ -23,7 +24,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">Nombre del producto</h2> 
 			<p class="product-detail-description">
-				<a href="product-add.html">Editar</a>
+				<a href="/product/add">Agregar Producto</a>
 			</p>
 		</div>
 		<div class="product-detail">
@@ -41,7 +42,7 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="profile.html">Nombre usuario: </a> </strong>
+								<strong> <a href="/profile">Nombre usuario: </a> </strong>
 								 Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
 							</div>
 						</article>
@@ -49,7 +50,7 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
+									<strong> <a href="/profile">Nombre usuario: </a> </strong>
 									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur.</p>
 							</div>
 						</article>
@@ -57,7 +58,7 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
+									<strong> <a href="/profile">Nombre usuario: </a> </strong>
 									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									</p>
 							</div>
@@ -66,7 +67,7 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
+									<strong> <a href="/profile">Nombre usuario: </a> </strong>
 									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet.</p>
 							</div>
 						</article>
@@ -74,14 +75,14 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
+									<strong> <a href="/profile">Nombre usuario: </a> </strong>
 									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore</p>
 							</div>
 						</article>
 
 					</section>
-					<form class="form" action="" method="POST">
+					<form class="form" action="/" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
@@ -93,7 +94,7 @@
 	<!-- /product detail -->
 
 	<!-- footer -->
-
+	<%- include('./partials/footer.ejs') %>
 	<!-- /footer -->
 
 </body>	
