@@ -1,0 +1,81 @@
+* { box-sizing: border-box; }
+	body { margin: 0; }	
+ul, ol { padding: 0; }
+li { list-style-type: none; }
+a { text-decoration: none; color: #000; }
+
+.banners {
+    height: 85vh;
+    display:flex;
+}
+
+.imgBanner {
+    width: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('/images/bannerNike.png');
+    background-position: 70%;
+    background-repeat: no-repeat;
+    
+}
+
+.brandName {
+    color: white;
+    font-size:800%;
+    margin-bottom:0;
+    margin-left: 10%;
+    font-family: 'Robot Roc', sans-serif;
+
+}
+
+.brandProduct1 {
+    font-size:500%;
+    margin-top:3%;
+    margin-left: 20%;
+    font-family: 'Robot Roc', sans-serif;
+    color: #EE541B;
+}
+
+.brandProduct2 {
+    color: white;
+    font-size:500%;
+    margin-top:3%;
+    margin-left: 30%;
+    font-family: 'Robot Roc', sans-serif;
+}
+
+.brandProduct3 {
+    color: white;
+    font-size:500%;
+    margin-top:3%;
+    margin-left: 40%;
+    font-family: 'Robot Roc', sans-serif;
+}
+
+.brandProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.brandLogo {
+    width: 25%;
+}
+
+.card {
+    width: 60%;
+    background-color:black;
+}
+
+.productImg {
+    filter: brightness(60%);
+}
+
+.textContainer {
+    height:10%;
+    text-align:center;
+}
+
+.nameProduct { 
+    color: white; 
+    font-size:150%;
+}
