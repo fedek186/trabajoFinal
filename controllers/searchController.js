@@ -15,7 +15,7 @@ let searchController =
             }
         }
         if (product.length > 0){
-            return res.render('search-results.ejs',{producto: product,tipo: true})
+            return res.render('search-results.ejs',{producto: product, tipo: true})
         } else {
             return res.render('search-results.ejs',{tipo:false,})
         }
