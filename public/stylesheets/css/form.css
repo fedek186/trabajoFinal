@@ -1,0 +1,40 @@
+.containerRegister{
+    background-color: rgb(96, 96, 96, 0.5);
+    width: 55%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+.userBox{
+    margin: 2% 2% 2% 20%;
+}
+.emailBox{
+    margin: 2% 2% 2% 20%;
+}
+.passBox{
+    margin: 2% 2% 2% 20%;
+}
+.dniBox{
+    margin: 2% 2% 2% 20%;
+}
+.profileBox{
+    margin: 2% 2% 2% 20%;
+}
+
+.emailBox input{
+    width: 60%;
+}
+.userBox input{
+    width: 60%;
+}
+.passBox input{
+    width: 60%;
+}
+.dniBox input{
+    width: 60%;
+}
+.profileBox input{
+    width: 60%;
+}

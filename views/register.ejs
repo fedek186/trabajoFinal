@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="/stylesheets/css/bootstrap-grid.min.css">
 	<!-- Own Stylesheet -->
 	<link rel="stylesheet" href="/stylesheets/css/app.css">
+	<link rel="stylesheet" href="/stylesheets/css/form.css">
 </head>
 
 <body>
@@ -21,23 +22,53 @@
 	<%- include('./partials/header.ejs') %>
 	<!-- /Header -->
 
-	<!-- Novedades -->
+	<!--Formulario de register--> 
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Registrate</h2>
+			</div>	
+		</div>
+		<form action="/" method="get">	
+
+			<div class="containerRegister">
+				<div class="emailBox">
+					<label for="email"><b>Email</b></label>
+					<br>
+					<input type="text" name="email" id="email" placeholder="Ingrese su mail" required>
+				</div>
+				<div class="userBox">
+					<label for="text"><b>UserName</b></label>
+					<br>
+					<input type="text" name="user" id="user" placeholder="defina nombre de user" required>
+				</div>
+				<div class="passBox">
+					<label for="psw"><b>Contraseña</b></label>
+					<br>
+					<input type="text" name="password" id="password" placeholder="ingrese contrasena" required>
+				</div>
+				<div class="dniBox">
+					<label for="number"><b>Ingrese su Dni</b></label>
+					<br>
+					<input type="number" name="dni" id="dni" placeholder="ingrese su DNI" required>
+				</div>
+				<div class="profileBox">
+					<label for="file">Defina foto de perfil</label>
+					<br>
+					<input type="file" name="profilePic" id="profilePic" placeholder="Defina foto de perfil" required>
+				</div>
+				<button type="submit">Enviar</button>
 			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2>
 
-
+		</form>
 	<!-- footer -->
+<<<<<<< HEAD
 	<%- include('./partials/footer.ejs') %>
+=======
+
+	<%- include('./partials/footer.ejs') %>
+
+>>>>>>> 31511c398d2943297f378196295d97d972f1eeaa
 	<!-- /footer -->
 </body>
 
