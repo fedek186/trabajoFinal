@@ -1,13 +1,19 @@
 const productos = {
-    lista:	[
-        {
-            foto: '/images/products/jordan.jpg',
-            nombre: "Zapatillas Jordan",
-            desc: "Zapatillas negras de cuero australiano",
-            fecha: "15 de enero",
-            comentarios: "Hola"
-        }
-        ]
-};
+    lista: [{
+        id: 1,
+        foto: '/images/products/jordan.jpg',
+        nombre: "Zapatillas Jordan",
+        desc: "Zapatillas negras de cuero australiano",
+        fecha: "15 de enero",
+        comentarios: "Hola"
+    },{
+        id: 2,
+        foto: 'https://www.google.com/images/srpr/logo4w.png',
+        nombre: "Zapatillas Guarache",
+        desc: "Zapatillas negras de cuero australiano",
+        fecha: "17 de enero",
+        comentarios: "Hola"
+    }
+]};
 
 module.exports = productos;

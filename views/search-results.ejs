@@ -11,9 +11,9 @@
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap-grid.min.css">
 	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="/stylesheets/css/app.css">
 </head>
 
 <body>
@@ -85,10 +85,14 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá van los resultados de búsqueda. <br>
-			Eliminen estás líneas y cosntruyan la página de resultados de búsqueda. <br>
-			////////////////
-			</h2>
+			<% if(tipo == true){%>
+				<h2 class="col-12">producto: <%= producto[0].nombre %></h2>
+				<h2 class="col-12">Descripcion: <%= producto[0].desc %></h2>
+				<h2 class="col-12">producto: <%= producto[0].fecha %></h2>
+				<h2 class="col-12">producto: <%= producto[0].comentarios %></h2>
+				<%} else{ %>
+				<h2 class="col-12">producto: no encontrado</h2>
+				<%}%> 
 
 
 	<!-- footer -->
