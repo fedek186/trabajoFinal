@@ -17,6 +17,6 @@ Comentarios -> Nombre de Usuario/Texto de comentario/ Img de perfil
 
 -- Personalizacion
 
-Tema
-Tipografia
+Tema -> #EE541B / #FFFFFF / #000000 / #161616
+Tipografia -> Robot Roc/Questrial
 Edit
