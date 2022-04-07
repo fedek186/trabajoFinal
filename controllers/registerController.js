@@ -1,7 +1,9 @@
+var express = require('express');
+var router = express.Router();
 let registerController =
 {
     index: function(req, res) {
-        res.send('register');
+        res.render('register.ejs');
     },
 };
 
