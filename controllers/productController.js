@@ -1,7 +1,10 @@
+let productsDb = require('../db/productos')
+
 let productController =
 {
     index: function(req, res) {
-       res.render('product');
+      console.log(productsDb);
+       res.render('product', {producto: productsDb});
       },
     add : function(req, res) {
         res.render('product-add');

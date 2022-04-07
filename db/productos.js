@@ -1,7 +1,7 @@
 const productos = {
     lista:	[
         {
-            foto: 'https://www.google.com/images/srpr/logo4w.png',
+            foto: '/images/products/jordan.jpg',
             nombre: "Zapatillas Jordan",
             desc: "Zapatillas negras de cuero australiano",
             fecha: "15 de enero",
