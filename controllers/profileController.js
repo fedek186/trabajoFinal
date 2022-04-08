@@ -6,10 +6,14 @@ let profileController =
        res.render('profile', {usuario : usuariodb.lista[0]});
       },
     edit: function(req, res) {
-        return res.render('profile-edit');
-       }
-    //el usuario ya va a estar logeado para entrar en profile asi que eso no es un problema
-    // esos datos serían: el nombre, el email, la foto y el nombre de usuario arriba a la derecha
+        return res.render('profile-edit', {usuario : usuariodb.lista[0]});
+       },
+    register: function(req, res) {
+        res.render('register.ejs');
+    },
+    login: function(req, res) {
+        res.render('login.ejs');
+    }
 
 };
 

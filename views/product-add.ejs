@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-
-
-
+<%- include('./partials/head.ejs') %> 
 <body>
 	<!-- Header -->
 	<%- include('./partials/headerLogueado.ejs') %>
 	<!-- /Header -->
 	<!-- Novedades -->
+
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Agregar productos</h2>
+				<h2 class="products-title" id="agregarProductos">Agregar productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
 			<form action="" method="get">
-				<input type="file" name="foto">
-				<input type="trxt" placeholder="Nombre" name="name">
-				<input type="text" placeholder="Descripcion" name="desc">
-				<input type="date" placeholder="Fecha" name="date">
-				<input type="submit" value="enviar">
+				<div class="containerProduct"> 	
+					<div class="nombreBox">
+						<input type="trxt" placeholder="Nombre" name="name">
+					</div> 
+					<br>
+					<div class="descripcionBox">
+						<input type="text" placeholder="Descripcion" name="desc">
+					</div> 
+					<br>
+					<div class="fechaBox">
+						<input type="date" placeholder="Fecha" name="date">
+					</div> 
+					<br>
+					<div class="fotoBox">
+						<input type="file" name="foto">
+					</div> 
+					<br>
+					<div class="submit box">
+						<input type="submit" value="Enviar">
+					</div> 	
+
+				</div>
 			</form>
 		</div>
 	</div>

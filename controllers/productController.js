@@ -1,5 +1,5 @@
 let productsDb = require('../db/productos')
-
+let usuariodb = require('../db/usuarios')
 let productController =
 {
     index: function(req, res) {
@@ -7,7 +7,7 @@ let productController =
        res.render('product', {producto: productsDb});
       },
     add : function(req, res) {
-        res.render('product-add');
+        res.render('product-add',{usuario : usuariodb.lista[0]});
        },
 };
 

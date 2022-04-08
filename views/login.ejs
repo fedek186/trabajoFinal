@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-
-
-
+<%- include('./partials/head.ejs') %> 
 <body>
 	<!-- Header -->
 	<%- include('./partials/header.ejs') %>
@@ -13,25 +11,27 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Ingresar</h2>
+				<h2 class="products-title" id="ingresar">Ingresar</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<div>
 				<form action="/" method="get">
-					<div>
-					<label> Nombre de usuario </label>
-					<input type="text">
-					</div>
-					<div>
-					<label> Contraseña </label>
-					<input type="password" name="password">
-					</div>
-					<div>
-						<label> Recordarme </label>
-						<input type="checkbox">
-					</div>
-					<div>
-						<input name="doLogin"  type="submit" value="Login" />
+					<div class="containerLogin">
+						<div class="usuarioLogin">
+							<label id="idDelBreak"> Nombre de usuario </label>
+							<input type="text">
+						</div>
+						<div class="passwordBox">
+							<label id="idDelBreak"> Contraseña </label>
+							<input type="password" name="password">
+						</div>
+						<div class="remindBox">
+							<label id="idDelBreak"> Recordarme </label>
+							<input type="checkbox">
+						</div>
+						<div>
+							<input name="doLogin"  type="submit" value="Login" />
+						</div>
+		
 					</div>
 				</form>
 				
