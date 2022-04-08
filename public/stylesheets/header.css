@@ -1,0 +1,45 @@
+.contenedorHeader{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(86, 86, 86);
+}
+
+/*icono de user*/
+.userBoton{
+    width: 10%;
+    margin-left: 4%;
+
+}
+.userBtn {
+    width: 5vh;
+    margin-right: 4%;
+    margin-top: 10%;
+}
+.regisBtn {
+    width: 5vh;  
+}
+
+/*seccion busqueda*/
+.searchInput{
+    width: 80%;
+    height: 30px;
+}
+.seccionBusqueda{
+    margin-right: 3%;
+    width: 20%;
+    margin-top: 1%;
+}
+.botonBusqueda{
+    background-color: orange;
+}
+.botonBusqueda img{
+    height: 20px;
+}
+.formularioBusqueda{
+    display: flex;
+    align-items: center;
+}
+
