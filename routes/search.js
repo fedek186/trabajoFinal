@@ -5,7 +5,7 @@ let products = require('../db/productos')
 const controller = require('../controllers/searchController');
 
 /* GET home page. */
-router.get('/search',controller.index);
+router.get('/search-results',controller.index);
 
 router.get('/:id', controller.search)
 
