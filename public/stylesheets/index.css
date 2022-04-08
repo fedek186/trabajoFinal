@@ -78,4 +78,5 @@ a { text-decoration: none; color: #000; }
 .nameProduct { 
     color: white; 
     font-size:150%;
+    font-family: 'Questrial', sans-serif;
 }
