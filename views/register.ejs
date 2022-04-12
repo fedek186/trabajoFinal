@@ -11,45 +11,45 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Registrate</h2>
+				<h2 class="registerTitle">REGISTER</h2>
 			</div>	
 		</div>
 		<form action="/" method="get">	
-
+		<div class="contenedorPrincipal">
 			<div class="containerRegister">
 				<div class="emailBox">
 					<label for="email"><b id="idDelBreak">Email</b id="idDelBreak"></label>
 					<br>
-					<input type="text" name="email" id="email" placeholder="Ingrese su mail" required>
+					<input type="text" name="email" id="email" placeholder="insert email" required>
 				</div>
 				<div class="userBox">
 					<label for="text"><b id="idDelBreak">UserName</b id="idDelBreak"></label>
 					<br>
-					<input type="text" name="user" id="user" placeholder="defina nombre de user" required>
+					<input type="text" name="user" id="user" placeholder="UserName" required>
 				</div>
 				<div class="passBox">
-					<label for="psw"><b id="idDelBreak">Contraseña</b id="idDelBreak"></label>
+					<label for="psw"><b id="idDelBreak">Password</b id="idDelBreak"></label>
 					<br>
-					<input type="text" name="password" id="password" placeholder="ingrese contrasena" required>
+					<input type="text" name="password" id="password" placeholder="insert password" required>
 				</div>
 				<div class="nacimientoBox">
-					<label for="number"><b id="idDelBreak">Ingrese su fecha de nacimiento</b id="idDelBreak"></label>
+					<label for="number"><b id="idDelBreak"> Date of Birth</b id="idDelBreak"></label>
 					<br>
-					<input type="date" name="fecha de nacimiento" id="nacimiento" placeholder="ingrese su fecha de nacimiento" required>
+					<input type="date" name="fecha de nacimiento" id="nacimiento" placeholder="Date Birth" required>
 				</div>
 				<div class="dniBox">
-					<label for="number"><b id="idDelBreak">Ingrese su Dni</b id="idDelBreak"></label>
+					<label for="number"><b id="idDelBreak">Citizent Number</b id="idDelBreak"></label>
 					<br>
-					<input type="number" name="dni" id="dni" placeholder="ingrese su DNI" required>
+					<input type="number" name="dni" id="dni" placeholder="Citizent number" required>
 				</div>
 				<div class="profileBox">
-					<label for="file"> <b id="idDelBreak">Defina foto de perfil</b id="idDelBreak"></label>
+					<label for="file"> <b id="idDelBreak">Define Profile Pic</b id="idDelBreak"></label>
 					<br>
 					<input type="file" name="profilePic" id="profilePic" placeholder="Defina foto de perfil" required>
 				</div>
-				<button type="submit" class="sendForm">Enviar</button>
+				<button type="submit" class="enviarButton">SEND</button>
 			</div>
-
+		</div>
 		</form>
 	<!-- footer -->
 	<%- include('./partials/footerNw.ejs') %>

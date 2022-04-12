@@ -1,12 +1,4 @@
-.containerRegister{
-    background-color: rgb(96, 96, 96, 0.5);
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15%;
-}
-/*!ingresar titulo*/
+/*!LOGIN SECCION*/
 .products-title{
     font-family: 'Robot Roc';
 }
@@ -33,6 +25,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
+    align-items: center;
     transform: skew(-20deg);
     margin-left: 5%;
 }
@@ -50,13 +43,14 @@
     align-items: center;
     transform: skew(-20deg);
     margin-right: 7%;
+    margin-bottom: 2%;
 }
 .passwordBox input{
     height: 25px;
 }
 
 #passwordInput{
-    width: 110%;
+    
 }
 
 /*todo: apartado recuerdame*/
@@ -70,10 +64,10 @@
 } 
 
 .sendForm{
-    margin-right: 15%;
+    margin-right: 10%;
+    margin-top: 2%;
 }
 .enviarForm{
-    transform: skew(-20deg);
     font-family: "Robot Roc";
     color: #EE541B;
     background: none;
@@ -105,11 +99,38 @@
     color: #EE541B;
     font-weight: 500;
 }
+
+/*!REGISTER SECCION*/
+.registerTitle{
+    color: #EE541B;
+    font-size: 30px;
+    font-family: 'Robot Roc';
+}
+.contenedorPrincipal{
+    background-color: rgb(0, 0, 0);
+    transform: skew(10deg);
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 35vw;
+    height: 67vh;
+}
+.containerRegister{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    transform: skew(-10deg);
+    font-family: 'Robot Roc';
+}
+.containerRegister input:placeholder-shown{
+    font-size: 10px;
+    padding-left: 1%;
+}
 .userBox{
     margin: 2% 2% 2% 20%;
 }
 .emailBox{
-    margin: 2% 2% 2% 20%;
+    margin: 5% 2% 2% 20%;
 }
 .passBox{
     margin: 2% 2% 2% 20%;
@@ -123,23 +144,44 @@
 .nacimientoBox{
     margin: 2% 2% 2% 20%;
 }
+.enviarButton{
+    width: 20%;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 80%;
+    color: #EE541B;
+    background: none;
+    font-family: 'Robot Roc';
+}
 
 .emailBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 .userBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 .passBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 .dniBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 .profileBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 .nacimientoBox input{
     width: 60%;
+    margin-top: 1%;
+    height: 25px;
 }
 
