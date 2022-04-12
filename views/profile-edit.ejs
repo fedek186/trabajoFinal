@@ -11,17 +11,33 @@
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Editar mi perfil</h2>
+			<div class="col-12" id="col-12-id">
+				<h2 class="products-title" id="products-title-id">Editar mi perfil</h2>
 			</div>
 		</div>
 			<!-- Show the "ultimos" products -->
 			<form action="" method="get">
-				<input type="file" name="">
-				<input type="text" placeholder="Usuario" name="usuario">
-				<input type="password" placeholder="Contraseña" name="contraseña">
-				<input type="text" placeholder="DNI" name="dni">
-				<input type="submit" value="enviar">
+				<div class="containerLogin" id="centrandoCaja-profile-edit">
+					<div class="profile-edit-box">
+						<label id="idDelBreak">Foto de perfil</label>
+						<input type="file" name="">
+					</div>
+					<div class="profile-edit-box">
+						<label id="idDelBreak">Nombre de usuario</label>
+						<input type="text" placeholder="Usuario" name="usuario">
+					</div>
+					<div class="profile-edit-box">
+						<label id="idDelBreak">Contraseña</label>
+						<input type="password" placeholder="Contraseña" name="contraseña">
+					</div>
+					<div class="profile-edit-box">
+						<label id="idDelBreak">DNI</label>
+						<input type="text" placeholder="DNI" name="dni">
+					</div>
+					<div class="profile-edit-box" id="enviar">
+						<input type="submit" value="Enviar">
+					</div>
+				</div>
 			</form>
 	</div>
 
