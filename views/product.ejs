@@ -25,7 +25,17 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
+					<% for( let i = 0; i < comentario.length; i++ ) { %>
 						<article>
+							<img src="<%= comentario[i].imagenDePerfil %>" alt="">
+							<div class="data">
+								<p class="user">
+								<strong> <a href="/profile"><%= comentario[i].nombreDeUsuario %>: </a> </strong>
+								<%= comentario[i].textoDelComentario %></p>
+							</div>
+						</article>
+					<% } %>
+<!-- 						<article>
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
@@ -67,7 +77,7 @@
 									Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore</p>
 							</div>
 						</article>
-
+ -->
 					</section>
 					<form class="form" action="/" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
