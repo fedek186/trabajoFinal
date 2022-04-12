@@ -12,31 +12,30 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title" id="ingresar">Ingresar</h2>
+				<h2 class="products-title" id="ingresar">Iniciar  Sesion</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+			
 				<form action="/" method="get">
 					<div class="containerLogin">
 						<div class="usuarioLogin">
-							<label id="idDelBreak"> Nombre de usuario </label>
+							<label id="idDelBreak">Nombre de usuario</label>
 							<input type="text">
 						</div>
 						<div class="passwordBox">
-							<label id="idDelBreak"> Contraseña </label>
-							<input type="password" name="password">
+							<label id="idDelBreak"> Contrasena   </label>
+							<input id="passwordInput" type="password" name="password">
 						</div>
 						<div class="remindBox">
 							<label id="idDelBreak"> Recordarme </label>
-							<input type="checkbox">
+							<input class="checkBox" type="checkbox">
 						</div>
-						<div>
-							<input name="doLogin"  type="submit" value="Login" />
-						</div>
-		
+						<div class="sendForm">
+							<button class="enviarForm" type="submit">Enviar</button>
+						</div>		
 					</div>
 				</form>
-				
-			</div>
+		</div>
 	<!-- footer -->
 	<%- include('./partials/footerNw.ejs') %>
 	<!-- /footer -->
