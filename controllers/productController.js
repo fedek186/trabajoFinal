@@ -1,13 +1,13 @@
 let productsDb = require('../db/productos')
 let usuariodb = require('../db/usuarios')
+let comentariosDb = require('../db/comentario')
 let productController =
 {
     index: function(req, res) {
-      console.log(productsDb);
-       res.render('product', {producto: productsDb});
+       res.render('product', {producto: productsDb, comentario: comentariosDb.lista});
       },
     add : function(req, res) {
-        res.render('product-add',{usuario : usuariodb.lista[0]});
+        res.render('product-add',{usuario : usuariodb.lista});
        },
 };
 
