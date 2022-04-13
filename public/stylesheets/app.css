@@ -426,12 +426,43 @@ hr {
 .comments .user{
   font-size: 1.7em;
 }
+/* profile-edit*/
+#products-title-id {
+  font-size: 30px;
+  color: #EE541B;
+}
+#col-12-id {
+  margin-left: 30%;
+}
+.profile-edit-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  transform: skew(-20deg);
+  margin-left: 5%;
+}
+.profile-edit-box input{
+  height: 25px;
+  color: #EE541B;
+}
+#centrandoCaja-profile-edit {
+  margin-top: 0%;
+  margin-left: 30%;
+  width: 40vw;
+  height: 45vw;
+}
+#enviar {
+  background-color: #EAC926;
+}
 
 /*====== Formularios ======*/
 .form-label {
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+}
+.col-12 {
+  margin-left: 150px;
 }
 
 .form-input {
