@@ -57,8 +57,20 @@ a { text-decoration: none; color: #000; }
     margin-left: 5%;
 }
 
+.frase{
+    display: flex;
+    flex-direction: row;
+}
+
+.frase p{
+    font-size: 35px;
+    font-weight: 600;
+}
+
 .brandLogo {
     width: 25%;
+    margin-right: 30%;
+    margin-left: 5%;
 }
 
 .card {
