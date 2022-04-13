@@ -64,8 +64,9 @@
 } 
 
 .sendForm{
-    margin-right: 10%;
+    margin-right: 15%;
     margin-top: 2%;
+    transform: skew(-20deg);
 }
 .enviarForm{
     font-family: "Robot Roc";
