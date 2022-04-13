@@ -12,15 +12,17 @@
 }
 
 .product-img {
-    width: 40%;
+    width: 55%;
     height:auto;
     filter: brightness(60%);
 }
 
 .container-info {
     align-self: center;
-    background-color:black;
-    width:30%;
+    background-image:url('/images/trapecio.svg');
+    background-size:100%;
+    background-repeat:no-repeat;
+    width:40%;
     height:70%;
     display:flex;
     align-items: center;
@@ -42,10 +44,16 @@
     text-align: justify;
 }
 
+.linkAddProd {
+    width: 100%;
+    height: auto;
+   display: flex;
+   justify-content:flex-end;
+}
+
+
 .add-product {
     width:8%;
-    align-self: flex-end;
-    margin-right: 5%;
 }
 
  /*  Comentarios Producto   */
@@ -56,6 +64,7 @@
 
 .titulos-comentarios {
     display: flex;
+  
 }
 
 .comentarios-title {
@@ -64,6 +73,7 @@
     font-family: 'Robot Roc', sans-serif;
     margin-left: 2%;
 }
+
 
 .add-coment {
   width:2%;
@@ -74,25 +84,29 @@ margin-left: 2%;
 .lista-comentarios {
     display: flex;
     height:40%;
+    flex-wrap: wrap;
 }
 
 .contianer-comentario {
     background-color: black;
-    width: 25%;
+    width: 20%;
     margin-left:2%;
     display: flex;
     align-items: center;
+    transform: skew(10deg);
 
 }
 
 .img-comentario {
     width: 15%;
     border-radius: 50%;
-    margin-left:2%
+    margin-left:2%;
+    transform: skew(-10deg);
 }
 
 .texto-comentario {
    margin-left: 5%;
+   transform: skew(-10deg);
 }
 
 
@@ -101,6 +115,7 @@ margin-left: 2%;
     font-size:2em;
     font-family: 'Questrial', sans-serif;
     margin: 0;
+    transform: skew(-10deg);
 }
 
 .desc-comentario {
@@ -111,4 +126,6 @@ margin-left: 2%;
     object-fit: contain;
     text-align: justify;
     margin: 0;
+    transform: skew(-10deg);
 }
+
