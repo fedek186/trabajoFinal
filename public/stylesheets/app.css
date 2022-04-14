@@ -175,11 +175,14 @@ hr {
 .products-title {
   font-size: 2.4em;
   font-weight: 400;
-  color: var(--gray);
+  color:#EE541B;
+  
 }
-
+#moviendoProducts-title {
+  margin-left: -13%;
+}
 .product-box {
-  background-color: #ffffff;
+  background-color: black;
   border-radius: 5px;
   overflow: hidden;
   transition: 300ms;
@@ -200,6 +203,7 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  color: white;
 }
 
 .product-box_data h2 {
@@ -489,6 +493,49 @@ textarea.form-input {
 }
 
 /*====== Profile ======*/
+#css-cajaangulada {
+  background-color: rgba(0, 0, 0);
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  transform: skew(20deg);
+  font-family: "Robot Roc";
+  align-items: center;
+  margin-left: -40px;
+}
+#image-container-profile {
+  background-color: RGB(235, 235, 235);
+  margin-bottom: -10px;
+  z-index: 2;
+}
+#main-title-profile {
+  color: #EE541B;
+  transform: skew(-20deg);
+}
+#datos-caja-profile {
+  color: whitesmoke;
+  transform: skew(-20deg);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -15px;
+  margin-left: -30px;
+}
+.div-profile-datos {
+  margin-bottom: 20px;
+}
+.ordenando-li-profile {
+  display: inline-block;
+  justify-content: space-between;
+}
+#ordenando-li-profile-especifico {
+  margin-left: 25px;
+}
+#cajaProfileProductos123 {
+  margin-left: 0px;
+}
+#angulando-seguir {
+  transform: skew(-20deg);
+  background-color:#EE541B;
+}
 .info-usuario{
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
@@ -496,7 +543,7 @@ textarea.form-input {
 }
 
 .foto-perfil{
-  border-radius: 50%;
+  margin-top: -10px;
 }
 
 .main-title{

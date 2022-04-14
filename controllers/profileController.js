@@ -1,9 +1,9 @@
-
 let usuariodb = require ('../db/usuarios')
+let productodb = require ('../db/productos')
 let profileController =
 {
     index: function(req, res) {
-       res.render('profile', {usuario : usuariodb.lista[0]});
+       res.render('profile', {usuario : usuariodb.lista[0], productos: productodb.lista});
       },
     edit: function(req, res) {
         return res.render('profile-edit', {usuario : usuariodb.lista[0]});
