@@ -21,145 +21,39 @@ Tema -> #EE541B / #FFFFFF / #000000 / #161616
 Tipografia -> Robot Roc/Questrial
 Edit 
 
-<!-- Banner -->
-	<div class="banner">
-		<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
-	</div>
-	<!-- /Banner -->
-
-	<!-- Novedades -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Novedades</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
+<div class="container products-wrapper">
+		<div class="d-flex align-items-center">
+			<h2 class="products-title"><%= producto.lista[0].nombre %></h2> 
+			<p class="product-detail-description">
+				<a href="/product/add">Agregar Producto</a>
+			</p>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<article class="col-12 col-lg-8 product-detail-info">
+					<img src="<%= producto.lista[0].foto %> " alt="" class="product-detail-img">
+					<p class="product-detail-description">
+						<%= producto.lista[0].desc %>.</p>
+				</article>
+				<div class="col-12 col-lg-4">
+					<section class="comments">
+					<% for( let i = 0; i < comentario.length; i++ ) { %>
+						<article>
+							<img src="<%= comentario[i].imagenDePerfil %>" alt="">
+							<div class="data">
+								<p class="user">
+								<strong> <a href="/profile"><%= comentario[i].nombreDeUsuario %>: </a> </strong>
+								<%= comentario[i].textoDelComentario %></p>
+							</div>
 						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="product.html">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
+					<% } %>
+					</section>
+					<form class="form" action="/" method="POST">
+						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+					</form>
+					<hr>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- /Novedades -->
-	
-	<!-- Más comentados -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Más comentados</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-		</div>
-	</div>
-	<!-- /Más comentados -->

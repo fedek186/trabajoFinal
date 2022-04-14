@@ -20,11 +20,6 @@ const comentarios = {
             textoDelComentario : "Carísimas e incomodas. Un error por todos lados",
             imagenDePerfil : '/images/users/281-2817805_face-tiger-logo-logo-hd-png-download.png',
         },
-        {
-            nombreDeUsuario : "Kozak55",
-            textoDelComentario : "Hola. Para ser jordan son bastante baratas. La tela es de buena calidad y los materiales en general son muy buenos. Las compré hace ya más de un año y siguen en perfecto estado. ",
-            imagenDePerfil : '/images/users/424788.png',
-        }
     ]
 }
 

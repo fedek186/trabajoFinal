@@ -9,44 +9,36 @@
 	<!-- /Header -->
 	
 	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= producto.lista[0].nombre %></h2> 
-			<p class="product-detail-description">
-				<a href="/product/add">Agregar Producto</a>
-			</p>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto.lista[0].foto %> " alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= producto.lista[0].desc %>.</p>
-				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
-					<% for( let i = 0; i < comentario.length; i++ ) { %>
-						<article>
-							<img src="<%= comentario[i].imagenDePerfil %>" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/profile"><%= comentario[i].nombreDeUsuario %>: </a> </strong>
-								<%= comentario[i].textoDelComentario %></p>
-							</div>
-						</article>
-					<% } %>
-<!-- 				El array sería "comentario" q es el nombre de la propiedad dentro del objeto literal de product.controller 
-					comentario incluye comentario.lista
- -->				</section>
-					<form class="form" action="/" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
-				</div>
+	 <section class="product-detailNW">
+		<article class="product-product">
+			<img src="<%= producto.lista[0].foto%>" class="product-img">
+			<div class="container-info">
+				<h3 class="product-name"> [<%= producto.lista[0].nombre %>] </h3>
+				<p class="product-desc"> <%= producto.lista[0].desc%> </p>
+				<a  href="/product/add"class="linkAddProd"><img src="./images/icons/icon-add.svg" class="add-product"></a>
 			</div>
-		</div>
-	</div>
+		</article>
+		<section class="coments-container">
+			<article class="titulos-comentarios">
+				<h2 class="comentarios-title">Comentarios</h2>
+				<img src="./images/icons/icon-add.svg" class="add-coment">
+			</article>
+			<section class="lista-comentarios">
+				<% for( let i = 0; i < comentario.length; i++ ) { %>
+					<article class="contianer-comentario">
+						<img src="<%= comentario[i].imagenDePerfil %>"  class="img-comentario">
+						<div class="texto-comentario">
+							<p class="username-comentario"><%= comentario[i].nombreDeUsuario %></p>
+							<p class="desc-comentario"><%= comentario[i].textoDelComentario %></p>
+						</div>
+					</article>	
+				<% } %>
+			</section>			
+		</section>
+	</section> 
+
+
+		
 	<!-- /product detail -->
 
 	<!-- footer -->
