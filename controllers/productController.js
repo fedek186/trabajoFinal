@@ -9,7 +9,7 @@ let productController =
        res.render('product', {producto: productsDb, comentario: comentariosDb.lista});
       },
     add : function(req, res) {
-        res.render('product-add',{usuario : usuariodb.lista });
+        res.render('product-add',{usuario : usuariodb.lista[0] });
        },
 };
 
