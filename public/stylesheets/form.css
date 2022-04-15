@@ -1,4 +1,7 @@
 /*!LOGIN SECCION*/
+.col-12 {
+    margin: 0;
+}
 .products-title{
     font-family: 'Robot Roc';
 }

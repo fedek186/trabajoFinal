@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-let products = require('../db/productos')
+let modules = require('../db/modulo');
+let products = modules.opciones.productos;
+
 let searchController =
 {
     index: function(req, res) {

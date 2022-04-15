@@ -18,7 +18,7 @@
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title" id="main-title-profile"> <%= usuario.username %> 
 						<a href="/profile/edit">
-							<i class="fas fa-cog"></i>
+							<img src="./images/icons/icon-edit.svg">
 						</a>
 					</h1>
 					<a class="btn mt-3 ml-4" href="" id="angulando-seguir">SEGUIR</a>
@@ -48,7 +48,7 @@
 					<section class="product-box">
 						<a href="/product">
 							<figure class="product-box_image">
-								<img src="<%= productos[i].foto %> " alt="cafetera moulinex">
+								<img class="product-box-image-image"src="<%= productos[i].foto %> " alt="cafetera moulinex">
 							</figure>
 							<article class="product-box_data">
 								<h2><%= productos[i].nombre%></h2>

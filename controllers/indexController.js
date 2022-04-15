@@ -1,14 +1,9 @@
-const productos = require('../db/productos')
-const usuarios = require ('../db/usuarios')
+let modules = require('../db/modulo');
+const productos = modules.opciones.productos;
+
 let indexController =
 {index: function (req,res) {
-  res.render('index')
+  return res.render('index', {products: productos});
 }};
 
 module.exports = indexController;
-//    index: function(req, res) {
-/*   res.render('index', { title: 'Express' });
-},
-foto: function (req,res) {
-res.send (productos.lista[0].foto)
-} */
