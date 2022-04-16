@@ -16,7 +16,9 @@ let productController =
       if (productoMostrar != null) {
         return res.render ('product', {producto: productoMostrar, comentario: comentariosDb.lista});
       } else {
+        //Nosotros para que siempre muestre un producto decidimos que si el ID ingresado (de manera manual) no existe mostremos un producto predeterminado siendo el mismo el que se encuentra en la pos 0 del array
         productoMostrar = productsDb.lista[0]
+        return res.render ('product', {producto: productoMostrar, comentario: comentariosDb.lista});
       }},
       add : function(req, res) {
         return res.render('product-add',{usuario : usuariodb.lista[0] });
