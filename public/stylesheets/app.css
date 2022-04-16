@@ -17,6 +17,13 @@
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box; }
+	body { margin: 0; }	
+ul, ol { padding: 0; }
+li { list-style-type: none; }
+a { text-decoration: none; color: #000;
 }
 
 html,
@@ -561,6 +568,550 @@ textarea.form-input {
   border-radius: 4px;
   color: #fff;
 }
+
+/*====== Footer ======*/
+.footer {
+  background-color: #161616;
+  height:15vh;
+  display: flex;
+  align-items: center;
+}
+
+.logoFooter {
+  width: 8%;
+ margin-right: 10%;
+ margin-left: 5%;
+}
+
+.doneBy{
+  font-family: 'Robot Roc', sans-serif;
+  color: #EE541B;
+  font-size: 300%;
+  margin-right: 15%;
+}
+.name {
+  font-family: 'Robot Roc', sans-serif;
+  color: white;
+  margin-right: 10%;
+  font-size: 250%;
+}
+
+/*====== Footer ======*/
+/*!LOGIN SECCION*/
+.col-12 {
+  margin: 0;
+}
+.products-title{
+  font-family: 'Robot Roc';
+}
+/**Login container*/
+.containerLogin{
+  background-color: rgba(0, 0, 0);
+  /* width: 30vw;
+  height: 35vh; */
+  width: 30vw;
+  height: 40vh;
+  transform: skew(20deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 70%;
+  margin-bottom: 30%;
+  margin-top: 10%;
+  font-family: "Robot Roc";
+}
+/**apartado de texto del form login*/
+/*todo: apartado User*/
+.usuarioLogin{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  align-items: center;
+  transform: skew(-20deg);
+  margin-left: 5%;
+}
+.usuarioLogin input{
+  height: 25px;
+}
+#idDelBreak{
+  margin-bottom: 5%;
+}
+
+/*todo: apartado password*/
+.passwordBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: skew(-20deg);
+  margin-right: 7%;
+  margin-bottom: 2%;
+}
+.passwordBox input{
+  height: 25px;
+}
+
+/* aca habia algo que estaba vacio, lo comente#passwordInput{
+  
+} */
+
+/*todo: apartado recuerdame*/
+.remindBox{
+  transform: skew(-20deg);
+  margin: 2% 0% 0% 30%;
+}
+.checkBox{
+  height: 17px;
+  width: 17px;
+} 
+
+.sendForm{
+  margin-right: 15%;
+  margin-top: 2%;
+  transform: skew(-20deg);
+}
+.enviarForm{
+  font-family: "Robot Roc";
+  color: #EE541B;
+  background: none;
+  font-size: 20px;
+}
+
+
+
+#ingresar {
+  margin-left: 33%;
+  font-size: 30px;
+  color: #EE541B;
+}
+
+#idDelBreak {
+  font-size: 20px;
+  color: #EE541B;
+  font-weight: 500;
+}
+
+/*!REGISTER SECCION*/
+.registerTitle{
+  color: #EE541B;
+  font-size: 30px;
+  font-family: 'Robot Roc';
+}
+.contenedorPrincipal{
+  background-color: rgb(0, 0, 0);
+  transform: skew(10deg);
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-left: 25%;
+  width: 35vw;
+  height: 67vh;
+}
+.containerRegister{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  transform: skew(-10deg);
+  font-family: 'Robot Roc';
+}
+.containerRegister input:placeholder-shown{
+  font-size: 10px;
+  padding-left: 1%;
+}
+.userBox{
+  margin: 2% 2% 2% 20%;
+}
+.emailBox{
+  margin: 5% 2% 2% 20%;
+}
+.passBox{
+  margin: 2% 2% 2% 20%;
+}
+.dniBox{
+  margin: 2% 2% 2% 20%;
+}
+.profileBox{
+  margin: 2% 2% 2% 20%;
+}
+.nacimientoBox{
+  margin: 2% 2% 2% 20%;
+}
+.enviarButton{
+  width: 20%;
+  font-size: large;
+  font-weight: 600;
+  margin-left: 80%;
+  color: #EE541B;
+  background: none;
+  font-family: 'Robot Roc';
+}
+
+.emailBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+.userBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+.passBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+.dniBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+.profileBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+.nacimientoBox input{
+  width: 60%;
+  margin-top: 1%;
+  height: 25px;
+}
+
+/**container prod*/
+
+.contenedorPrinProd{
+  background-color: rgb(0, 0, 0);
+  transform: skew(10deg);
+  margin-top: 2%;
+  margin-left: 25%;
+  width: 35vw;
+  height: 55vh;
+}
+.containerProduct{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  margin-top: 5%;
+  transform: skew(-10deg);
+  font-family: 'Robot Roc';
+  color: #EE541B;
+}
+#agregarProductos {
+  margin-left: 37%;
+}
+.nombreBox input{
+  height: 20px;
+  font-family: 'Robot Roc';
+} 
+.descripcionBox input{
+  height: 50px;
+}
+
+/*====== Header ======*/
+.contenedorHeader{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #161616;
+  padding:2%;
+}
+
+/*icono de user*/
+
+.regisUserContainer {
+  width: 15%;
+  margin-left: 3%;
+  display: flex;
+}
+
+.linkContainer {
+  width:100%;
+  align-items: center;
+  display: flex;
+}
+.userBtn {
+  width: 25%;
+  margin-right:35%;
+}
+.regisBtn {
+  width: 25%; 
+}
+
+.headerUserName {
+  color: #EE541B; ;
+}
+/* Logo */
+
+.headerLogo{
+  width:7%;
+}
+
+/*seccion busqueda*/
+.searchInput{
+  width: 80%;
+  line-height: 2;
+  padding:1%;
+}
+.searchInput:focus-visible{
+  outline:none;
+}
+.formularioBusqueda{
+  display: flex;
+  align-items: center;
+  width:20%;
+  background-color:white;
+ 
+}
+.botonBusqueda{
+  background-color: #EE541B;
+  padding:3%;
+
+}
+.botonBusqueda img{
+  width: 60%;
+}
+
+/*====== Index ======*/
+
+
+
+.banners {
+    height: 85vh;
+    display:flex;
+}
+
+.imgBanner {
+    width: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('/images/bannerNike.png');
+    background-position: 70%;
+    background-repeat: no-repeat;
+    
+}
+
+.brandName {
+    color: white;
+    font-size:8em;
+    margin-bottom:0;
+    margin-left: 10%;
+    font-family: 'Robot Roc', sans-serif;
+
+}
+
+.brandProduct1 {
+    font-size:5em;
+    margin-top:3%;
+    margin-left: 20%;
+    font-family: 'Robot Roc', sans-serif;
+    color: #EE541B;
+    object-fit: contain;
+}
+
+.brandProduct2 {
+    color: white;
+    font-size:5em;
+    margin-top:3%;
+    margin-left: 30%;
+    font-family: 'Robot Roc', sans-serif;
+    object-fit: contain;
+}
+
+.brandProduct3 {
+    color: white;
+    font-size:5em;
+    margin-top:3%;
+    margin-left: 40%;
+    font-family: 'Robot Roc', sans-serif;
+    object-fit: contain;
+}
+
+.brandProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+    width:40%;
+    object-fit: contain;
+}
+
+.frase{
+    display: flex;
+    flex-direction: row;
+}
+
+.frase p{
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.brandLogo {
+    width: 25%;
+    margin-right: 30%;
+    margin-left: 5%;
+}
+
+.card {
+    width: 45%;
+    height:55%;
+    background-color:black;
+}
+
+.img-container {
+    height: 87%;
+}
+
+.productImg {
+    height: 100%;
+    filter: brightness(60%);
+}
+
+.textContainer {
+    text-align:center;
+}
+
+.nameProduct { 
+    color: white; 
+    font-size:1.5em;
+    font-family: 'Questrial', sans-serif;
+}
+/* 
+Carousel */
+
+/*====== Product ======*/
+
+ /* Body Product  */
+ 
+ .product-detailNW {
+  height:115vh;
+}
+
+/*  Producto   */
+.product-product {
+  margin-top: 4%;
+  display: flex;
+  height:60%;
+}
+
+.product-img {
+  width: 45%;
+  height:auto;
+  filter: brightness(70%);
+}
+
+.container-info {
+  align-self: center;
+  background-color: black;
+  width:40%;
+  height:70%;
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  justify-content:space-around;
+}
+
+.product-name {
+  color: #EE541B;
+  font-size:3em;
+  font-family: 'Questrial', sans-serif;
+  justify-self: center;
+}
+
+.product-desc {
+  color: white;
+  width: 90%;
+  font-size:2em;
+  font-family: 'Questrial', sans-serif;
+  text-align: justify;
+}
+
+.linkAddProd {
+  width: 100%;
+  height: auto;
+ display: flex;
+ justify-content:flex-end;
+ margin-right:10%;
+}
+
+
+.add-product {
+  width:8%;
+}
+
+/*  Comentarios Producto   */
+
+.coments-container {
+  height: 30%;
+}
+
+.titulos-comentarios {
+  display: flex;
+
+}
+
+.comentarios-title {
+  color: #EE541B;
+  font-size:4.5em;
+  font-family: 'Robot Roc', sans-serif;
+  margin-left: 2%;
+}
+
+
+.add-coment {
+width:2%;
+filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(0%) contrast(103%);
+margin-left: 2%;
+}
+
+.lista-comentarios {
+  width: 100%;
+  display: flex;
+  height:40%;
+  flex-wrap: wrap;
+}
+
+.contianer-comentario {
+  background-color: black;
+  width: 20%;
+  margin-left:2%;
+  display: flex;
+  align-items: center;
+  transform: skew(10deg);
+
+}
+
+.img-comentario {
+  width: 15%;
+  border-radius: 50%;
+  margin-left:2%;
+  transform: skew(-10deg);
+}
+
+.texto-comentario {
+ margin-left: 5%;
+ transform: skew(-10deg);
+}
+
+
+.username-comentario {
+  color: #EE541B;
+  font-size:2em;
+  font-family: 'Questrial', sans-serif;
+  margin: 0;
+  transform: skew(-10deg);
+}
+
+.desc-comentario {
+  width: 90%;
+  color: white;
+  font-size:1.25em;
+  font-family: 'Questrial', sans-serif;
+  object-fit: contain;
+  text-align: justify;
+  margin: 0;
+  transform: skew(-10deg);
+}
+
 
 
 /*====== Media-Queries ======*/

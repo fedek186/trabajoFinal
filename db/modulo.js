@@ -91,7 +91,7 @@ const modulo = {
             },
             {
                 id: 9,
-                foto: '/images/products/jordanOff.jpg',
+                foto: '/images/products/jordanOff.webp',
                 nombre: "JORDAN 1 RETRO HIGH OFF WHITE",
                 desc: "Time for some Tobacco Road vibes with these Jordan 1 Retro Off-Whites. Also known as the “UNC” editions, these Jordan 1s are the third colorway designed by Virgil Abloh and made in collaboration with his Off-White label",
                 fecha: "15 de enero",
