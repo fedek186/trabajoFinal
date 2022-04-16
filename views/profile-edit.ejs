@@ -24,7 +24,7 @@
 					</div>
 					<div class="profile-edit-box">
 						<label id="idDelBreak">Nombre de usuario</label>
-						<input type="text" placeholder="Usuario" name="usuario">
+						<input type="text" value=" <%= usuario.username %> " name="usuario">
 					</div>
 					<div class="profile-edit-box">
 						<label id="idDelBreak">Contraseña</label>
@@ -32,7 +32,7 @@
 					</div>
 					<div class="profile-edit-box">
 						<label id="idDelBreak">DNI</label>
-						<input type="text" placeholder="DNI" name="dni">
+						<input type="text" value="<%= usuario.dni %>" placeholder="" name="dni">
 					</div>
 					<div class="profile-edit-box" id="enviar">
 						<input type="submit" value="Enviar">

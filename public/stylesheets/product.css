@@ -12,16 +12,14 @@
 }
 
 .product-img {
-    width: 55%;
+    width: 45%;
     height:auto;
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 
 .container-info {
     align-self: center;
-    background-image:url('/images/trapecio.svg');
-    background-size:100%;
-    background-repeat:no-repeat;
+    background-color: black;
     width:40%;
     height:70%;
     display:flex;
@@ -34,6 +32,7 @@
     color: #EE541B;
     font-size:3.5em;
     font-family: 'Questrial', sans-serif;
+    justify-self: center;
 }
 
 .product-desc {
@@ -49,6 +48,7 @@
     height: auto;
    display: flex;
    justify-content:flex-end;
+   margin-right:10%;
 }
 
 

@@ -55,6 +55,7 @@ a { text-decoration: none; color: #000; }
     flex-direction: column;
     justify-content: space-around;
     margin-left: 5%;
+    width:40%;
 }
 
 .frase{
@@ -63,7 +64,7 @@ a { text-decoration: none; color: #000; }
 }
 
 .frase p{
-    font-size: 35px;
+    font-size: 4em;
     font-weight: 600;
 }
 
@@ -74,16 +75,21 @@ a { text-decoration: none; color: #000; }
 }
 
 .card {
-    width: 60%;
+    width: 45%;
+    height:55%;
     background-color:black;
 }
 
+.img-container {
+    height: 87%;
+}
+
 .productImg {
+    height: 100%;
     filter: brightness(60%);
 }
 
 .textContainer {
-    height:10%;
     text-align:center;
 }
 

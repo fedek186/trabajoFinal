@@ -197,6 +197,10 @@ hr {
   border-bottom: 1px solid var(--light-gray);
 }
 
+.product-box-image-image {
+
+}
+
 .product-box_data {
   padding: 15px;
   position: relative;

@@ -1,5 +1,7 @@
-let usuariodb = require ('../db/usuarios')
-let productodb = require ('../db/productos')
+let modules = require('../db/modulo');
+let usuariodb = modules.opciones.usuarios;
+let productodb = modules.opciones.productos;
+
 let profileController =
 {
     index: function(req, res) {
