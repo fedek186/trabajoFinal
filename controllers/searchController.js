@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let modules = require('../db/modulo');
-let products = modules.opciones.productos;
+let products = modules.productos;
 
 let searchController =
 {

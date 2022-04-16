@@ -1,7 +1,7 @@
 let modules = require('../db/modulo');
-let productsDb = modules.opciones.productos;
-let usuariodb = modules.opciones.usuarios;
-let comentariosDb = modules.opciones.comentarios;
+let productsDb = modules.productos;
+let usuariodb = modules.usuarios;
+let comentariosDb = modules.comentarios;
 
 let productController =
 {

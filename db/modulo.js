@@ -1,5 +1,4 @@
 const modulo = {
-    opciones: {
         comentarios: {
             lista : [
                 {
@@ -118,8 +117,6 @@ const modulo = {
                 }
                 ]
         } 
-    }
-
 }
 
 module.exports = modulo;

@@ -1,5 +1,5 @@
 let modules = require('../db/modulo');
-const productos = modules.opciones.productos;
+const productos = modules.productos;
 
 let indexController =
 {index: function (req,res) {

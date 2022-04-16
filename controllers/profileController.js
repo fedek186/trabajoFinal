@@ -1,6 +1,6 @@
 let modules = require('../db/modulo');
-let usuariodb = modules.opciones.usuarios;
-let productodb = modules.opciones.productos;
+let usuariodb = modules.usuarios;
+let productodb = modules.productos;
 
 let profileController =
 {
