@@ -24,12 +24,12 @@
 				<img src="/images/icons/icon-add.svg" class="add-coment">
 			</article>
 			<section class="lista-comentarios">
-				<% for( let i = 0; i < comentario.length; i++ ) { %>
+				<% for( let i = 0; i < comentarios.length; i++ ) { %>
 					<article class="contianer-comentario">
-						<img src="<%= comentario[i].imagenDePerfil %>"  class="img-comentario">
+						<img src="<%= comentarios[i].imagenDePerfil %>"  class="img-comentario">
 						<div class="texto-comentario">
-							<p class="username-comentario"><%= comentario[i].nombreDeUsuario %></p>
-							<p class="desc-comentario"><%= comentario[i].textoDelComentario %></p>
+							<p class="username-comentario"><%= comentarios[i].nombreDeUsuario %></p>
+							<p class="desc-comentario"><%= comentarios[i].textoDelComentario %></p>
 						</div>
 					</article>	
 				<% } %>
