@@ -11,17 +11,17 @@
 	<!-- product detail -->
 	 <section class="product-detailNW">
 		<article class="product-product">
-			<img src="<%= producto.lista[0].foto%>" class="product-img">
+			<img src="<%= producto.foto%>" class="product-img">
 			<div class="container-info">
-				<h3 class="product-name"> [<%= producto.lista[0].nombre %>] </h3>
-				<p class="product-desc"> <%= producto.lista[0].desc%> </p>
-				<a  href="/product/add"class="linkAddProd"><img src="./images/icons/icon-add.svg" class="add-product"></a>
+				<h3 class="product-name"> [<%= producto.nombre %>] </h3>
+				<p class="product-desc"> <%= producto.desc%> </p>
+				<a  href="/product/add"class="linkAddProd"><img src="/images/icons/icon-add.svg" class="add-product"></a>
 			</div>
 		</article>
 		<section class="coments-container">
 			<article class="titulos-comentarios">
 				<h2 class="comentarios-title">Comentarios</h2>
-				<img src="./images/icons/icon-add.svg" class="add-coment">
+				<img src="/images/icons/icon-add.svg" class="add-coment">
 			</article>
 			<section class="lista-comentarios">
 				<% for( let i = 0; i < comentario.length; i++ ) { %>
