@@ -1,0 +1,25 @@
+.footer {
+    background-color: #161616;
+    height:15vh;
+    display: flex;
+    align-items: center;
+}
+
+.logoFooter {
+    width: 8%;
+   margin-right: 10%;
+   margin-left: 5%;
+}
+
+.doneBy{
+    font-family: 'Robot Roc', sans-serif;
+    color: #EE541B;
+    font-size: 300%;
+    margin-right: 15%;
+}
+.name {
+    font-family: 'Robot Roc', sans-serif;
+    color: white;
+    margin-right: 10%;
+    font-size: 250%;
+}
