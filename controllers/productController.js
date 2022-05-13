@@ -22,7 +22,7 @@ let productController =
       }},
       add : function(req, res) {
         return res.render('product-add',{usuario : usuariodb.lista[0] });
-         }
+        }
 };
 
 module.exports = productController;
