@@ -1,0 +1,131 @@
+ /* Body Product  */
+ 
+ .product-detailNW {
+    height:115vh;
+}
+
+ /*  Producto   */
+.product-product {
+    margin-top: 4%;
+    display: flex;
+    height:60%;
+}
+
+.product-img {
+    width: 45%;
+    height:auto;
+    filter: brightness(70%);
+}
+
+.container-info {
+    align-self: center;
+    background-color: black;
+    width:40%;
+    height:70%;
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.product-name {
+    color: #EE541B;
+    font-size:3.5em;
+    font-family: 'Questrial', sans-serif;
+    justify-self: center;
+}
+
+.product-desc {
+    color: white;
+    width: 90%;
+    font-size:2em;
+    font-family: 'Questrial', sans-serif;
+    text-align: justify;
+}
+
+.linkAddProd {
+    width: 100%;
+    height: auto;
+   display: flex;
+   justify-content:flex-end;
+   margin-right:10%;
+}
+
+
+.add-product {
+    width:8%;
+}
+
+ /*  Comentarios Producto   */
+
+.coments-container {
+    height: 30%;
+}
+
+.titulos-comentarios {
+    display: flex;
+  
+}
+
+.comentarios-title {
+    color: #EE541B;
+    font-size:4.5em;
+    font-family: 'Robot Roc', sans-serif;
+    margin-left: 2%;
+}
+
+
+.add-coment {
+  width:2%;
+filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(0%) contrast(103%);
+margin-left: 2%;
+}
+
+.lista-comentarios {
+    display: flex;
+    height:40%;
+    flex-wrap: wrap;
+}
+
+.contianer-comentario {
+    background-color: black;
+    width: 20%;
+    margin-left:2%;
+    display: flex;
+    align-items: center;
+    transform: skew(10deg);
+
+}
+
+.img-comentario {
+    width: 15%;
+    border-radius: 50%;
+    margin-left:2%;
+    transform: skew(-10deg);
+}
+
+.texto-comentario {
+   margin-left: 5%;
+   transform: skew(-10deg);
+}
+
+
+.username-comentario {
+    color: #EE541B;
+    font-size:2em;
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
+    transform: skew(-10deg);
+}
+
+.desc-comentario {
+    width: 90%;
+    color: white;
+    font-size:1.25em;
+    font-family: 'Questrial', sans-serif;
+    object-fit: contain;
+    text-align: justify;
+    margin: 0;
+    transform: skew(-10deg);
+}
+

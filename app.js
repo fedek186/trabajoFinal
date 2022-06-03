@@ -10,7 +10,7 @@ const productRouter = require('./routes/product');
 const profileRouter = require('./routes/profile');
 const registerRouter = require('./routes/register');
 const searchRouter = require('./routes/search');
-
+//ANvl
 var app = express();
 
 // view engine setup
