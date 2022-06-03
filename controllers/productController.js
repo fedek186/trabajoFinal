@@ -2,6 +2,10 @@ let modules = require('../db/modulo');
 let productsDb = modules.productos;
 let usuariodb = modules.usuarios;
 let comentariosDb = modules.comentarios;
+const db = require("../database/models");
+const movie = db.Movie; 
+const op = db.Sequelize.Op;
+
 
 let productController =
 {
