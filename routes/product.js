@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-const controller = require('../controllers/productController');
+const productController = require('../controllers/productController');
 
-/* GET home page. */
-router.get('/id/:id',controller.index);
-router.get('/add',controller.add);
+//*SHOW PROD
+router.get('/', productController.show);
+//*EDIT PROD
+router.get('./edit' , productController.edit);
+router.post('./edit', productController.procesEdit);
+//*ADD PROD
+router.get('./edit' , productController.add);
+router.post('./edit', productController.procesAdd);
+
 module.exports = router;

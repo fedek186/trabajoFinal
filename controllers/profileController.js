@@ -9,11 +9,11 @@ const op = db.Sequelize.Op;
 let profileController =
 {
     index: function(req, res) {
-       res.render('profile', {usuario : usuariodb.lista[0], productos: productodb.lista});
-      },
+    res.render('profile', {usuario : usuariodb.lista[0], productos: productodb.lista});
+    },
     edit: function(req, res) {
         return res.render('profile-edit', {usuario : usuariodb.lista[0]});
-       },
+    },
     register: function(req, res) {
         res.render('register.ejs');
     },

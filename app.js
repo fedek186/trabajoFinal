@@ -5,10 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const loginRouter = require('./routes/login');
 const productRouter = require('./routes/product');
-const profileRouter = require('./routes/profile');
-const registerRouter = require('./routes/register');
+const userRouter = require('./routes/user')
 const searchRouter = require('./routes/search');
 //ANvl
 var app = express();
@@ -24,10 +22,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); //Todos los archivos que esten dentro de la carpeta public son estaticos. 
 
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
 app.use('/product', productRouter);
-app.use('/profile', profileRouter);
-app.use('/register', registerRouter);
+app.use('/user', userRouter);
 app.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
