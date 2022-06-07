@@ -12,10 +12,10 @@ router.post('/register', userController.procesarRegister); //! hay que definir l
 router.get('/login', userController.login);
 router.post('/login', userController.procesarLogin);
 //*LOGOUT 
-router.post('./logout', userController.logout);
+router.post('/logout', userController.logout);
 //*SHOW USER
 router.get('/', userController.show);
 //*EDIT USER
-router.get('./edit' , userController.edit);
-router.post('./edit', userController.procesEdit);
+router.get('/edit' , userController.edit);
+router.post('/edit', userController.procesarEdit);
 module.exports = router;

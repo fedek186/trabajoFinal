@@ -6,10 +6,10 @@ const productController = require('../controllers/productController');
 //*SHOW PROD
 router.get('/', productController.show);
 //*EDIT PROD
-router.get('./edit' , productController.edit);
-router.post('./edit', productController.procesEdit);
+router.get('/edit' , productController.edit);
+router.post('/edit', productController.procesarEdit);
 //*ADD PROD
-router.get('./edit' , productController.add);
-router.post('./edit', productController.procesAdd);
+router.get('/add' , productController.add);
+router.post('/add', productController.procesarAdd);
 
 module.exports = router;

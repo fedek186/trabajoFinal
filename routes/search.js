@@ -4,7 +4,7 @@ var router = express.Router();
 const controller = require('../controllers/searchController');
 
 /* GET home page. */
-router.get('/search/',controller.index);
+router.get('/search',controller.index);
 
 
 
