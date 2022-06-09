@@ -1,10 +1,10 @@
-let modules = require('../db/modulo');
+/* let modules = require('../db/modulo');
 let productsDb = modules.productos;
 let usuariodb = modules.usuarios;
-let comentariosDb = modules.comentarios;
-const db = require("../database/models");
-const movie = db.Movie; 
-const op = db.Sequelize.Op;
+let comentariosDb = modules.comentarios; */
+/* const db = require("../database/models");
+const movie = db.Movie;  
+const op = db.Sequelize.Op;*/
 
 
 let productController =
@@ -24,9 +24,24 @@ let productController =
         productoMostrar = productsDb.lista[0]
         return res.render ('product', {producto: productoMostrar, comentarios: comentariosDb.lista});
       }},
-      add : function(req, res) {
+     /*  add : function(req, res) {
         return res.render('product-add',{usuario : usuariodb.lista[0] });
-        }
+        }, */
+      show : function(req, res) {
+        res.send('Mostrar producto')
+      },
+      edit : function(req, res) {
+        res.send('Mostrar edit producto')
+      },
+      procesarEdit : function(req, res) {
+        res.send('procesar Edit producto')
+      },
+      add : function(req, res) {
+        res.send(' Add producto')
+      },
+      procesarAdd : function(req, res) {
+        res.send('procesar Add producto')
+      }
 };
 
 module.exports = productController;
