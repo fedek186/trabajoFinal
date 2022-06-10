@@ -2,9 +2,9 @@
 let productsDb = modules.productos;
 let usuariodb = modules.usuarios;
 let comentariosDb = modules.comentarios; */
-/* const db = require("../database/models");
-const movie = db.Movie;  
-const op = db.Sequelize.Op;*/
+const db = require("../database/models");
+const producto = db.Producto;  
+const op = db.Sequelize.Op;
 
 
 let productController =
@@ -28,8 +28,17 @@ let productController =
         return res.render('product-add',{usuario : usuariodb.lista[0] });
         }, */
       show : function(req, res) {
-        res.send('Mostrar producto')
-      },
+        let idProducto = req.params.id
+        producto.findByPk(idProducto)
+        .then( (results)=> {
+          console.log(results)
+          res.render('products', {producto:results.dataValues});
+        })
+        .catch((err) => {
+          console.error(err);
+      });
+      
+    },
       edit : function(req, res) {
         res.send('Mostrar edit producto')
       },
