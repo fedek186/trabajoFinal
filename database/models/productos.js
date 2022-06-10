@@ -26,10 +26,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
         },
         created_at:{
-            type: dataTypes.TIMESTAMP,
+            type: dataTypes.DATE,
         },
         updated_at: {
-            type: dataTypes.TIMESTAMP,
+            type: dataTypes.DATE,
         }
     }
 
