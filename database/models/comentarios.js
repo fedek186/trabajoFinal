@@ -5,7 +5,7 @@ module.exports = function (sequelize, dataTypes) {
 
     /* Configuraciones de las columnas de la tabla */
     let cols = {
-        idComentarios:{
+        id:{
             autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTEGER,
@@ -13,17 +13,11 @@ module.exports = function (sequelize, dataTypes) {
         comentario:{
             type: dataTypes.STRING,
         },
-        foto:{
-            type: dataTypes.STRING,
-        },
-        idUsuario:{
+        id_usuario:{
             type: dataTypes.INTEGER,
         },
-        idProductos:{
+        id_producto:{
             type: dataTypes.INTEGER,
-        },
-        nombreUsuario:{
-            type: dataTypes.STRING,
         },
         fecha:{
             type: dataTypes.DATE,
@@ -34,7 +28,7 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: 'comentarios', 
         timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
-        underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
+        underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     }
 
     const Comentario = sequelize.define(alias, cols, config);
