@@ -21,39 +21,3 @@ Tema -> #EE541B / #FFFFFF / #000000 / #161616
 Tipografia -> Robot Roc/Questrial
 Edit 
 
-<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= producto.lista[0].nombre %></h2> 
-			<p class="product-detail-description">
-				<a href="/product/add">Agregar Producto</a>
-			</p>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto.lista[0].foto %> " alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= producto.lista[0].desc %>.</p>
-				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
-					<% for( let i = 0; i < comentario.length; i++ ) { %>
-						<article>
-							<img src="<%= comentario[i].imagenDePerfil %>" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/profile"><%= comentario[i].nombreDeUsuario %>: </a> </strong>
-								<%= comentario[i].textoDelComentario %></p>
-							</div>
-						</article>
-					<% } %>
-					</section>
-					<form class="form" action="/" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
-				</div>
-			</div>
-		</div>
-	</div>

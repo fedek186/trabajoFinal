@@ -11,7 +11,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`)
 );
 CREATE TABLE `productos` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `foto` varchar(1000) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(2000) NOT NULL,
@@ -45,3 +45,16 @@ CREATE TABLE `seguidor_seguidos` (
   CONSTRAINT `idSeguido` FOREIGN KEY (`id_seguido`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `idSeguidor` FOREIGN KEY (`id_seguidor`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
+
+/*Inserts*/
+
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('fedekozak', 'fedek@gmail.com', '12345678', '14/11/2002', '44554540', 'fede.jpg');
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('rafarodri', 'rafarodri@gmail.com', '12345678', '21/12/2011', '50943212', 'rafa.jpg');
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('gonazoljimenez', 'gonzajime@gmail.com', '12345678', '15/8/2020', '60431232', 'gonza.jpg');
+
+INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('dior.jpg', 'Jordan Dior', 'Jordan dior', '6/10/2022', '1');
+INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('off.jpg', 'Nike Off White', 'Nike off white', '6/10/2022', '2');
+
+INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('Alto producto', '1', '14/11/202', '1');
+INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('Que buen producto', '2', '14/11/2003', '2');
+
