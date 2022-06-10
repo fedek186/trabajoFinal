@@ -1,16 +1,29 @@
-/* //*Llamo la base de datos. 
-const db = require('../database/models/usuarios');
-const usuario = db.usuario;
-const op = db.Sequelize.Op;
-const bcrypt = require('bcryptjs'); */
-
+ //*Llamo la base de datos. 
+const db = require('../database/models');
+const Usuario = db.Usuario; //* Ahorramos codigo
+// const op = db.Sequelize.Op; //* Da la posibilidad de trabajar con operadores
+const bcrypt = require('bcryptjs'); //* Sirve para el hashing
 
 let userController = {
     register : function(req, res) {
-        res.send('Mostrar registro')
+        return res.render ('register')
       },
       procesarRegister : function(req, res) {
-        res.send('Procesar registro')
+        let info = req.body; 
+        let usuario = {
+          email: info.email,
+          nombre_usuario: info.user,
+          contrasenia: bcrypt.hashSync(info.password, 10),
+          dni: info.dni,
+          fecha_nacimiento: info.fechaDeNacimiento,
+          foto_usuario: info.profilePic //* el info.nombre es el name del formulario, el foto_usuario viene de los modelos
+        }
+        Usuario.create(usuario)
+            .then(function (result) {
+                return res.redirect("/user/login")
+            }).catch(function(errores) {
+              console.log(errores);
+            })
       },
       login : function(req, res) {
         res.send('Mostrar Login')
