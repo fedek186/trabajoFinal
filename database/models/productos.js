@@ -5,7 +5,7 @@ module.exports = function (sequelize, dataTypes) {
 
     /* Configuraciones de las columnas de la tabla */
     let cols = {
-        idProductos:{
+        id:{
             autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTEGER,
@@ -22,21 +22,21 @@ module.exports = function (sequelize, dataTypes) {
         fecha:{
             type: dataTypes.DATE,
         },
-        idUsuario:{
+        id_usuario:{
             type: dataTypes.INTEGER,
         },
-        createdAt:{
+        created_at:{
             type: dataTypes.TIMESTAMP,
         },
-        updatedAt: {
+        updated_at: {
             type: dataTypes.TIMESTAMP,
         }
     }
 
     let config = {
         tableName: 'Producto', 
-        timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
-        underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
+        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+        underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     }
 
     const Producto = sequelize.define(alias, cols, config);
