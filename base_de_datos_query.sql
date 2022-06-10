@@ -4,7 +4,7 @@ CREATE TABLE `usuarios` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nombre_usuario` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `contrasenia` varchar(50) NOT NULL,
+  `contrasenia` varchar(200) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `dni` int(10) unsigned NOT NULL,
   `foto_usuario` varchar(1000) NOT NULL,
