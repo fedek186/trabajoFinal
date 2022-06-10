@@ -14,29 +14,30 @@
 			<img src="<%= producto.foto%>" class="product-img">
 			<div class="container-info">
 				<h3 class="product-name"> [<%= producto.nombre %>] </h3>
-				<p class="product-desc"> <%= producto.desc%> </p>
+				<p class="product-desc"> <%= producto.descripcion%> </p>
 				<a  href="/product/add"class="linkAddProd"><img src="/images/icons/icon-add.svg" class="add-product"></a>
 			</div>
 		</article>
-		<!-- <section class="coments-container">
+		<section class="coments-container">
 			<article class="titulos-comentarios">
 				<h2 class="comentarios-title">Comentarios</h2>
 				<img src="/images/icons/icon-add.svg" class="add-coment">
 			</article>
 			<section class="lista-comentarios">
-				<% for( let i = 0; i < comentarios.length; i++ ) { %>
+				<% for( let i = 0; i < producto.comentarioDeProducto.length; i++ ) { %>
 					<article class="contianer-comentario">
-						<img src="<%= comentarios[i].imagenDePerfil %>"  class="img-comentario">
+						<img src="<%=  %>"  class="img-comentario">
 						<div class="texto-comentario">
-							<p class="username-comentario"><%= comentarios[i].nombreDeUsuario %></p>
-							<p class="desc-comentario"><%= comentarios[i].textoDelComentario %></p>
+							<p class="username-comentario"><%=  %></p>
+							<p class="desc-comentario"><%= producto.comentarioDeProducto[i].comentario %></p>
 						</div>
 					</article>	
 				<% } %>
 			</section>			
 		</section>
 	</section> 
- -->
+		<% console.log(producto.comentarioDeProducto, 'Fedededede') %> 
+
 
 		
 	<!-- /product detail -->

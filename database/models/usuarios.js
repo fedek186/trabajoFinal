@@ -36,6 +36,14 @@ module.exports = function (sequelize, dataTypes) {
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     }
 
+    
+    Usuario.associate = (models) => {
+        Usuario.hasMany(models.Comentario, {
+            as: 'comentarioDeUsuario',
+            foreignKey: 'id_usuario'
+        }) 
+    }
+
     const Usuario = sequelize.define(alias, cols, config);
 
     return Usuario;
