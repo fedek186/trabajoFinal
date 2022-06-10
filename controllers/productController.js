@@ -32,7 +32,8 @@ let productController =
 
         let relacion = {
           include: [
-              {association: 'comentarioDeProducto'}, //son los As
+              {association: 'comentarioDeProducto', 
+                include: [{association: 'usuarioRelacionado'}]}, 
           ]}; 
 
 
