@@ -26,10 +26,28 @@ let userController = {
             })
       },
       login : function(req, res) {
-        res.send('Mostrar Login')
+        res.render('login')
       },
-      procesarLogin : function(req, res) {
-        res.send('Procesar login')
+      procesarLogin : function(req,res) {
+        let info = req.body
+        let filtro = {where: [ { nombre_usuario: info.username}]};
+        Usuario.findOne(filtro)
+        .then((result) => {
+          if (result != null) {
+            let check = bcrypt.compareSync(info.password , result.contrasenia) //password proviene
+            if (check) {
+              return res.redirect("/")
+            } 
+            else {
+              return res.send(`Existe el mail ${result.email} pero la clave es incorrecta`); 
+            }
+          }
+          else {
+            return res.send (`No existe este mail ${info.email}`)
+          }
+        }).catch(function(errores) {
+          console.log(errores)
+        })
       },
       logout : function(req, res) {
         res.send('procesar logout')

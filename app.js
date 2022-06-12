@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session')
 
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); //Todos los archivos que esten dentro de la carpeta public son estaticos. 
+app.use(session( { secret: "Nuestro mensaje secreto", resave: false, saveUninitialized: true}))
 
 app.use('/', indexRouter);
 app.use('/product', productRouter);
