@@ -29,10 +29,18 @@ let productController =
         }, */
       show : function(req, res) {
         let idProducto = req.params.id
-        producto.findByPk(idProducto)
+
+        let relacion = {
+          include: [
+              {association: 'comentarioDeProducto', 
+                include: [{association: 'usuarioRelacionado'}]}, 
+          ]}; 
+
+
+        producto.findByPk(idProducto,relacion)
         .then( (results)=> {
           console.log(results)
-          res.render('products', {producto:results.dataValues});
+          res.render('product', {producto:results});
         })
         .catch((err) => {
           console.error(err);
@@ -46,10 +54,18 @@ let productController =
         res.send('procesar Edit producto')
       },
       add : function(req, res) {
-        res.send(' Add producto')
+        res.render('product-add')
       },
       procesarAdd : function(req, res) {
-        res.send('procesar Add producto')
+        let productoAcrear = req.body;
+        producto.create({
+          foto: productoAcrear.foto,
+          nombre: productoAcrear.nombre,
+          desc:productoAcrear.descripcion,
+          date: productoAcrear.fecha,
+          id_usuario: 1
+      });
+        res.redirect('/')
       }
 };
 

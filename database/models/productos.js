@@ -41,5 +41,12 @@ module.exports = function (sequelize, dataTypes) {
 
     const Producto = sequelize.define(alias, cols, config);
 
+    Producto.associate = (models) => {
+        Producto.hasMany(models.Comentario, {
+            as: 'comentarioDeProducto',
+            foreignKey: 'id_producto'
+        }) 
+    }
+
     return Producto;
 }
