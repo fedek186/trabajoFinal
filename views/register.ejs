@@ -14,7 +14,7 @@
 				<h2 class="registerTitle">REGISTER</h2>
 			</div>	
 		</div>
-		<form action="/" method="get">	
+		<form action="/user/register" method="post" enctype="multipart/form-data">	
 		<div class="contenedorPrincipal">
 			<div class="containerRegister">
 				<div class="emailBox">
@@ -25,24 +25,29 @@
 				<div class="userBox">
 					<label for="text"><b id="idDelBreak">UserName</b id="idDelBreak"></label>
 					<br>
-					<input type="text" name="user" id="user" placeholder="UserName" required>
+					<input type="text" name="username" id="user" placeholder="UserName" required>
 				</div>
 				<div class="passBox">
 					<label for="psw"><b id="idDelBreak">Password</b id="idDelBreak"></label>
-					<br>
-					<input type="text" name="password" id="password" placeholder="insert password" required>
+					<br> 
+					<input type="password" name="password" id="password" placeholder="insert password" required>
 				</div>
 				<div class="dniBox">
 					<label for="number"><b id="idDelBreak">Citizent Number</b id="idDelBreak"></label>
 					<br>
 					<input type="number" name="dni" id="dni" placeholder="Citizent number" required>
 				</div>
+				<div class="dniBox">
+					<label for="number"><b id="idDelBreak">Birth date</b id="idDelBreak"></label>
+					<br>
+					<input type="date" name="fechaDeNacimiento" id="dni" placeholder="Citizent number" required>
+				</div>
 				<div class="profileBox">
 					<label for="file"> <b id="idDelBreak">Define Profile Pic</b id="idDelBreak"></label>
 					<br>
-					<input type="file" name="profilePic" id="profilePic" placeholder="Defina foto de perfil" required>
+					<input type="file" name="profilePic"  id="profilePic" placeholder="Defina foto de perfil" required >
 				</div>
-				<button type="submit" class="enviarButton">SEND</button>
+				<button type="submit" class="enviarButton"> Enviar </button>
 			</div>
 		</div>
 		</form>
@@ -50,5 +55,4 @@
 	<%- include('./partials/footerNw.ejs') %>
 	<!-- /footer -->
 </body>
-
-</html>
+</html> 

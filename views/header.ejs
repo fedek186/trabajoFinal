@@ -1,0 +1,11 @@
+<header class="main-header">
+    <form action="/user/logout" method="post">
+        <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
+    </form>
+    <% if (locals.user != undefined) { %> 
+    <h1> Bienvenido <%= locals.user.nombre_usuario %> </p> 
+    <% } %> 
+    <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
+</header>
+<!-- aca estaba haciendo una prueba. El error que estaba teniendo era que estaba escribiendo locals.user.lo que estaba en el formulario de login
+Luego de analizar bien el procesar login, específicamente el DataValues, me di cuenta que la información que llegaba aca era la de los modelos. -->
