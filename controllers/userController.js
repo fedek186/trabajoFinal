@@ -45,18 +45,23 @@ let userController = {
               return res.redirect("/") //* Aca lo estoy redireccionando a index para probar si se crea la sesion
             } 
             else {
-              return res.send(`Existe el mail ${result.email} pero la clave es incorrecta`); 
+              return res.send(`La clave es incorrecta`); 
             }
           }
           else {
-            return res.send (`No existe este mail ${info.email}`)
+            return res.send (`No existe el usuario ${info.username}`)
           }
         }).catch(function(errores) {
           console.log(errores)
         })
       },
       logout : function(req, res) {
-        res.send('procesar logout')
+        let info = req.body;
+        if (info.logout != undefined) { //* aca inventé el "logout" pero creo que sería así. Antes de poder hacer esto tenemos que renderizar las páginas. 
+          req.session.destroy();
+          res.clearCookie('userId')
+          return res.redirect('/')
+        }
       },
       show : function(req, res) {
         res.send('Mostrar usuario')

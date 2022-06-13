@@ -1,4 +1,7 @@
 <header class="main-header">
+    <form action="/user/logout" method="post">
+        <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
+    </form>
     <% if (locals.user != undefined) { %> 
     <h1> Bienvenido <%= locals.user.nombre_usuario %> </p> 
     <% } %> 
