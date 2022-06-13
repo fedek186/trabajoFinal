@@ -1,0 +1,4 @@
+.listaBusqueda{
+    display: flex;
+    flex-direction: column;
+}

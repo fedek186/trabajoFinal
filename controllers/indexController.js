@@ -1,4 +1,4 @@
-/* const productos = {
+const productos = {
   lista: [
     {
     id: 1,
@@ -9,14 +9,22 @@
     comentarios: "Hola"
 }]
 }  
+/*
 const db = require("../database/models");
-const movie = db.Movie; /* El alias que le pongo a mi modelo 
+const movie = db.Movie;  El alias que le pongo a mi modelo 
 const op = db.Sequelize.Op; */
 
-let indexController =
-{index: function (req,res) {
-  /* return res.render('index', {products: productos}); */
-  res.send('Index');
-}};
+// const db = require('../database/models/productos');
+// const productos = db.Producto;
+// const op = db.Sequelize.Op;
+
+let indexController = {
+  index: function (req, res) {
+    return res.render('index', {
+      products: productos
+    });
+    // res.send(productos)
+  }
+};
 
 module.exports = indexController;
