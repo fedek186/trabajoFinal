@@ -873,6 +873,19 @@ textarea.form-input {
   width: 60%;
 }
 
+.listaBusqueda{
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0 20% 15%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.resultadoLista{
+  border: 1px solid blue;
+  padding: 10px;
+}
+
 /*====== Index ======*/
 
 
@@ -1158,6 +1171,7 @@ margin-left: 2%;
 
   .main-footer {
     padding: 40px 0;
+
   }
 
   .footer-data {
