@@ -14,7 +14,7 @@
 				<h2 class="registerTitle">REGISTER</h2>
 			</div>	
 		</div>
-		<form action="/user/register" method="post">	
+		<form action="/user/register" method="post" enctype="multipart/form-data">	
 		<div class="contenedorPrincipal">
 			<div class="containerRegister">
 				<div class="emailBox">
@@ -45,9 +45,9 @@
 				<div class="profileBox">
 					<label for="file"> <b id="idDelBreak">Define Profile Pic</b id="idDelBreak"></label>
 					<br>
-					<input type="file" name="profilePic" id="profilePic" placeholder="Defina foto de perfil" required>
+					<input type="file" name="profilePic"  id="profilePic" placeholder="Defina foto de perfil" required >
 				</div>
-				<button type="submit" class="enviarButton">logout</button>
+				<button type="submit" class="enviarButton"> Enviar </button>
 			</div>
 		</div>
 		</form>
