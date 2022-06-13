@@ -11,14 +11,14 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Resultados de busqueda</h2>
+				<h2 class="products-title">Resultados de busqueda: <%= palabraBuscada %> </h2>
+				<% if (resultado.length == 0){%>
+					<h1>No encontramos el prod buscado.</h1>
+				<%}%>
 			</div>
-			<% console.log(resultado, 'fede') %> 
 			<!-- Show the "ultimos" products -->
 			<ul class="listaBusqueda">
-			<% if (resultado == undefined){%>
-				<h1>No encontramos el prod buscado.</h1>
-			<%}%>
+		
 			<% for(let i = 0; i < resultado.length ; i++){%>
 				<li class="resultadoLista">
 					<h1 class="resultadoBusqueda"><%= resultado[i].nombre %></h1>

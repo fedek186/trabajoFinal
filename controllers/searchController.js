@@ -16,13 +16,13 @@ let searchController = {
                     nombre: {
                         [op.like]: "%" + buscada + "%"
                     }
-                }
+                }  
                 //* le digo que busque una donde el nombre sea como la buscada y prometo que mando el res cuando lo tenga.
             })
             .then((result) => {
-                console.log(result.dataValues);
                 res.render('search-results', {
-                    resultado: result //*llamo a resultado desde ejs para acceder a valores de result en vista
+                    resultado: result, //*llamo a resultado desde ejs para acceder a valores de result en vista
+                    palabraBuscada: buscada
                 })
 
 
