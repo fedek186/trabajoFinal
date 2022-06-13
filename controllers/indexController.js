@@ -16,7 +16,7 @@ const op = db.Sequelize.Op; */
 let indexController =
 {index: function (req,res) {
   /* return res.render('index', {products: productos}); */
-  res.send('Index');
+  res.render('header'); //* aca renderize el header para ver si la session estaba funcionando
 }};
 
 module.exports = indexController;

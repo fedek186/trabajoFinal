@@ -12,7 +12,7 @@ let userController = {
         let info = req.body; 
         let usuario = {
           email: info.email,
-          nombre_usuario: info.user,
+          nombre_usuario: info.username,
           contrasenia: bcrypt.hashSync(info.password, 10),
           dni: info.dni,
           fecha_nacimiento: info.fechaDeNacimiento,
@@ -33,10 +33,16 @@ let userController = {
         let filtro = {where: [ { nombre_usuario: info.username}]};
         Usuario.findOne(filtro)
         .then((result) => {
+
           if (result != null) {
-            let check = bcrypt.compareSync(info.password , result.contrasenia) //password proviene
+            let check = bcrypt.compareSync(info.password , result.contrasenia)
             if (check) {
-              return res.redirect("/")
+          
+              req.session.user = result.dataValues;
+              if(info.remember != undefined) {
+                res.cookie('userId', result.dataValues.id, {maxAge: 1000 * 60 * 10}) //* voy a enviarle al navegador la cookie
+              }
+              return res.redirect("/") //* Aca lo estoy redireccionando a index para probar si se crea la sesion
             } 
             else {
               return res.send(`Existe el mail ${result.email} pero la clave es incorrecta`); 

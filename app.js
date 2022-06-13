@@ -5,10 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
 
+//* Requerimiento de DB
+const db = require('./database/models');
+
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
 const userRouter = require('./routes/user')
 const searchRouter = require('./routes/search');
+
 //ANvl
 var app = express();
 
@@ -20,8 +24,44 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'))); //Todos los archivos que esten dentro de la carpeta public son estaticos. 
-app.use(session( { secret: "Nuestro mensaje secreto", resave: false, saveUninitialized: true}))
+app.use(express.static(path.join(__dirname, 'public'))); //Todos los archivos que esten dentro de la carpeta public son estaticos.
+
+//* Configuramos el session 
+app.use(session( { 
+  secret: "NWZapatillas", 
+  resave: false, 
+  saveUninitialized: true
+}));
+
+//* Middleware de session. Debe estar antes de la declaración de las rutas. 
+app.use(function(req,res, next) {
+   //* Aca evaluo la condicion creada en el procesarLogin
+  if(req.session.user != undefined) {
+    res.locals.user = req.session.user
+    return next ()
+  }
+  return next () //* Si no entra en el if que siga al próximo middleware
+});
+
+//* Middleware de cookies. 
+app.use(function (req,res,next) {
+  if (req.cookies.userId != undefined && req.session.user == undefined) {
+    //* la cookie se "activa" cuando se pierde la sesion
+    let idUsuarioEnCookie = req.cookies.userId;
+
+    db.Usuario.findByPk(idUsuarioEnCookie)
+    .then((result) => {
+      req.session.user = result.dataValues;
+      res.locals.user = req.session.user; //! Porque escribo dos veces dataValues?
+      return next();
+    }).catch (function (errores) {
+      console.log(errores);
+    });
+  } 
+    else {
+      return next ();
+  }
+}) 
 
 app.use('/', indexRouter);
 app.use('/product', productRouter);
