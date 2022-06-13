@@ -52,7 +52,7 @@ app.use(function (req,res,next) {
     db.Usuario.findByPk(idUsuarioEnCookie)
     .then((result) => {
       req.session.user = result.dataValues;
-      res.locals.user = req.session.user; //! Porque escribo dos veces dataValues?
+      res.locals.user = req.session.user; 
       return next();
     }).catch (function (errores) {
       console.log(errores);
