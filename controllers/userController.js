@@ -19,7 +19,7 @@ let userController = {
           foto_usuario: info.profilePic //* el info.nombre es el name del formulario, el foto_usuario viene de los modelos
         }
         Usuario.create(usuario)
-            .then(function (result) {
+            .then(function () {
                 return res.redirect("/user/login")
             }).catch(function(errores) {
               console.log(errores);

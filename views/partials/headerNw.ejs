@@ -2,14 +2,6 @@
     <section class="regisUserContainer">
         <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
         <a class="linkContainer" href="/user/register"><img class="regisBtn" src="/images/icons/register-icon.svg" alt="login" srcset=""></a>
-        <form action="/user/logout" method="post">
-            <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
-        </form>
-        <p> <% if (locals.user != undefined) { %> 
-            <h1> Bienvenido <%= locals.user.nombre_usuario %> </p> 
-            <% } %>  
-        </p>
-        <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
     </section>
     
     <section class="headerLogo">
