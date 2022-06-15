@@ -1012,15 +1012,52 @@ Carousel */
   filter: brightness(70%);
 }
 
-.container-info {
-  align-self: center;
-  background-color: black;
-  width:40%;
+.container-info-username {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 40%;
+  flex-direction: column;
+}
+
+.container-user-opciones{
+  display:flex;
+  align-items: center;
+  padding: 1%;
+  justify-content: space-around;
+  height: 15%;
+
+}
+
+.product-username {
+  justify-self: center;
+  color: #EE541B;
+  font-family: 'Robot Roc', sans-serif;
+  font-size:2em;
+  margin:1%
+}
+
+.opciones-product-user{
+  transform: skew(8deg);
+  background-color:black;
+  display:flex;
+  width:20%;
   height:70%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.opcionesProduct{
+  width:15%;
+}
+
+.container-info {
+  align-self: left;
+  background-color: black;
   display:flex;
   align-items: center;
   flex-direction:column;
-  justify-content:space-around;
+  height:70%;
 }
 
 .product-name {
@@ -1069,17 +1106,10 @@ Carousel */
   margin-left: 2%;
 }
 
-
-.add-coment {
-width:2%;
-filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(0%) contrast(103%);
-margin-left: 2%;
-}
-
 .lista-comentarios {
   width: 100%;
   display: flex;
-  height:40%;
+  height:30%;
   flex-wrap: wrap;
 }
 
@@ -1125,6 +1155,25 @@ margin-left: 2%;
   transform: skew(-10deg);
 }
 
+.titleAddComent {
+  color: #EE541B;
+  font-size:2em;
+  font-family: 'Robot Roc', sans-serif;
+  margin-left: 5%;
+}
+
+.formAddComent{
+height:20%;
+}
+
+.inputAddComent{
+  background-color:black;
+  color: white;
+  font-family: 'Questrial', sans-serif;
+  height:100%;
+  width:60%;
+  padding:1%;
+}
 
 
 /*====== Media-Queries ======*/
