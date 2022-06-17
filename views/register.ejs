@@ -14,13 +14,18 @@
 				<h2 class="registerTitle">REGISTER</h2>
 			</div>	
 		</div>
+		<div> 
+			<% if (locals.errors) { %>
+					<p style="color: red;"> <%- locals.errors.message %> </p>
+			<% } %>
+		</div>
 		<form action="/user/register" method="post" enctype="multipart/form-data">	
 		<div class="contenedorPrincipal">
 			<div class="containerRegister">
 				<div class="emailBox">
 					<label for="email"><b id="idDelBreak">Email</b id="idDelBreak"></label>
 					<br>
-					<input type="text" name="email" id="email" placeholder="insert email" required>
+					<input type="text" name="email" id="email" placeholder="insert email">
 				</div>
 				<div class="userBox">
 					<label for="text"><b id="idDelBreak">UserName</b id="idDelBreak"></label>
@@ -30,7 +35,7 @@
 				<div class="passBox">
 					<label for="psw"><b id="idDelBreak">Password</b id="idDelBreak"></label>
 					<br> 
-					<input type="password" name="password" id="password" placeholder="insert password" required>
+					<input type="password" name="password" id="password" placeholder="insert password">
 				</div>
 				<div class="dniBox">
 					<label for="number"><b id="idDelBreak">Citizent Number</b id="idDelBreak"></label>

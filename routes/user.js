@@ -4,10 +4,10 @@ const userController = require('../controllers/userController');
 
 //* Importaciones
 let multer = require('multer'); 
-let path = require ('path');
+let path = require('path');
 
 //* Configuración multer
-let almacenamiento = multer.diskStorage({
+let storage = multer.diskStorage({
     destination : function (req, file, cb) {
         cb(null, path.join(__dirname, '../public/images/users'));
     },
@@ -16,7 +16,7 @@ let almacenamiento = multer.diskStorage({
     }
 }); 
 
-let upload = multer({storage : almacenamiento })
+let upload = multer({storage : storage })
 
 //*rutas
 

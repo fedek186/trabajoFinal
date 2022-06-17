@@ -2,7 +2,7 @@
     <section class="regisUserContainer">
         <% if (locals.user != undefined) { %>
             <a class="linkContainer" href="/user/edit"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userProfile" srcset=""> 
-                <img class="headerUserName" src="/images/users/<%= locals.user.foto_usuario%>" alt="Hola" srcset=""> 
+                <img class="headerUserName" src="/images/users/<%= locals.user.foto_usuario%>" alt="Foto de <%= locals.user.nombre_usuario%>" srcset=""> 
             </a>     
         <% } %>
         <!-- <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
