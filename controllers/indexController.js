@@ -16,20 +16,20 @@ const productos = {
   }
 };*/
 
-//!ME QUEDA PEDIR LA BASE DE DATOS ARMAR UN PAR DE PROD CON FOTOS PARA METER Y LISTOO Y TERMINAR LO DE BUSQUDAA.
 const db = require('../database/models');
 const producto = db.Producto;
 const op = db.Sequelize.Op;
+
 let indexController = {
-  /* index: function (req, res) {
-    return res.render('index', {
-      products: productos
-    });
-  }, */
-  findAll: (req, res) => {  
+  findAll: (req, res) => {
+    let relacion = {
+      include: [
+        {association: "usuarioRelacionado"},
+        {}
+      ]
+    }
     producto.findAll({})
       .then((result) => {
-        // res.send(result)
         return res.render('index', {
           resultados: result,
           products: productos
