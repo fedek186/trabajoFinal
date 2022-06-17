@@ -1,0 +1,30 @@
+<header class="contenedorHeader">
+    <section class="regisUserContainer">
+        <% if (locals.user != undefined) { %>
+            <a class="linkContainer" href="/user/edit"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userProfile" srcset=""> 
+                <img class="headerUserName" src="/images/users/<%= locals.user.foto_usuario%>" alt="Foto de <%= locals.user.nombre_usuario%>" srcset=""> 
+            </a>     
+        <% } %>
+        <!-- <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
+        <a class="linkContainer" href="/user/register"><img class="regisBtn" src="/images/icons/register-icon.svg" alt="login" srcset=""></a> -->
+        <form action="/user/logout" method="post">
+            <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
+        </form>
+        <p> 
+            <h1> Bienvenido <%= locals.user.nombre_usuario %> </p>  
+        </p>
+        <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
+    </section>
+    
+    <section class="headerLogo">
+        <a href="/">
+            <img src="/images/NwLogo.svg" alt="Logo">
+        </a>
+    </section>
+    <form class="formularioBusqueda" action="/search" method="GET">
+        <button class="botonBusqueda">
+            <img src="/images/icons/icon-search.svg" alt="searchIcon" srcset="">
+        </button>
+        <input type="text" name="search" value="" class="searchInput">
+    </form>
+</header>
