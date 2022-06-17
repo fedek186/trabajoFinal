@@ -204,9 +204,9 @@ hr {
   border-bottom: 1px solid var(--light-gray);
 }
 
-.product-box-image-image {
+/* .product-box-image-image {
 
-}
+} */
 
 .product-box_data {
   padding: 15px;
@@ -998,9 +998,29 @@ textarea.form-input {
 }
 
 .card {
+    margin-top: 5%;
     width: 45%;
-    height:55%;
+    height:65%;
     background-color:black;
+}
+.cardSlide{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/*RESULTADOS BUSQUEDA*/
+
+.resultadosBusqueda{
+  width: 90%;
+  height: 80%;
+  margin: 5% 5% 10% 15% ;
+}
+.cardBusqueda{
+  margin-top: 5%;
+  width: 45%;
+  height: 80%;
+  background-color:black;
 }
 
 .img-container {

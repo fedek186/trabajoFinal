@@ -13,21 +13,26 @@
 			<div class="col-12">
 				<h2 class="products-title">Resultados de busqueda: <%= palabraBuscada %> </h2>
 				<% if (resultado.length == 0){%>
-					<h1>No encontramos el prod buscado.</h1>
+					<h1 class="resNE">No encontramos el prod buscado.</h1>
 				<%}%>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<ul class="listaBusqueda">
-		
-			<% for(let i = 0; i < resultado.length ; i++){%>
-				<li class="resultadoLista">
-					<h1 class="resultadoBusqueda"><%= resultado[i].nombre %></h1>
-					<div class="resultadoBusqueda"><%= resultado[i].descripcion %> </div>
-				</li>
-			<%}%> 
-			</ul>
-				
-	
+			<div class="resultadosBusqueda">
+				<div class="cardSlide">
+					<% for (let i = 0; i < resultado.length ; i++) {%> 
+						<a class="cardBusqueda" href="/product/id/<%= resultado[i].id%>">
+						<div class="img-container">
+							<img class = "productImg" src="<%= resultado[i].foto %>" alt="Product">
+						</div>
+						<div class="textContainer">
+							<p class="nameProduct">
+								[<%= resultado[i].nombre%>]
+							</p>
+						</div>
+						</a>
+					<%}%> 
+				</div>
+			</div>
 	<!-- footer -->
 	<%- include('./partials/footerNw.ejs') %>
 	<!-- /footer -->
