@@ -27,12 +27,18 @@ module.exports = function (sequelize, dataTypes) {
         },
         foto_usuario:{
             type: dataTypes.STRING,
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+        },
+        created_at:{
+            type: dataTypes.DATE,
         }
     }
 
     let config = {
         tableName: 'usuarios', 
-        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+        timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     }
 

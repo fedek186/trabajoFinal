@@ -8,6 +8,8 @@ CREATE TABLE `usuarios` (
   `fecha_nacimiento` date NOT NULL,
   `dni` int(10) unsigned NOT NULL,
   `foto_usuario` varchar(1000) NOT NULL,
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 );
 CREATE TABLE `productos` (
@@ -16,8 +18,8 @@ CREATE TABLE `productos` (
   `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(2000) NOT NULL,
   `fecha` date NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `id_usuario` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idUsuarioProductos` (`id_usuario`),
