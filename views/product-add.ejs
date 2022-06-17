@@ -5,6 +5,7 @@
 <body>
 	<!-- Header -->
 
+	<%- include('./partials/headerNw.ejs') %> 
 	
 	<!-- /Header -->
 	<!-- Novedades -->
@@ -15,7 +16,7 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 		<div class="contenedorPrinProd"> 
-			<form action="" method="POST"> 	<!-- Action va vacio porque la ruta dek post es la misma solo que x post -->
+			<form action="" method="POST" enctype="multipart/form-data"> 	<!-- Action va vacio porque la ruta dek post es la misma solo que x post -->
 				<div class="containerProduct"> 	
 					<div class="nombreBox">
 						<p>Nombre</p>

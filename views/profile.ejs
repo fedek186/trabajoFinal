@@ -4,7 +4,7 @@
 <%- include('./partials/head.ejs') %> 
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerLogueado.ejs') %> 
+	<%- include('./partials/headerNw.ejs') %> 
 	
 	<!-- /Header -->
 
@@ -12,14 +12,17 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2" id="image-container-profile">
-				<img src="<%= usuario.foto %> " alt="foto de perfil" class="foto-perfil">
+				<img src="/images/users/<%= usuario. foto_usuario %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6" id="css-cajaangulada">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title" id="main-title-profile"> <%= usuario.username %> 
+					<h1 class="main-title" id="main-title-profile"> <%= usuario. nombre_usuario %> 
+						<%   if(locals.user != undefined) { %>
+							<% if(locals.user.id == usuario.id) { %>
 						<a href="/profile/edit">
-							<img src="./images/icons/icon-edit.svg">
+							<img src="/images/icons/icon-edit.svg">
 						</a>
+						<% }}%>
 					</h1>
 					<a class="btn mt-3 ml-4" href="" id="angulando-seguir">SEGUIR</a>
 				</div>
@@ -42,23 +45,25 @@
 			<div class="col-12">
 				<h2 class="products-title" id="moviendoProducts-title">Mis productos</h2>
 			</div>
-		<% for( let i = 0; i < productos.length; i++ ) { %>
+			<%
+			if(usuario.productoDeUsuario.length > 0) { 
+			for( let i = 0; i < usuario.productoDeUsuario.length; i++ ) { %>
 				<!-- Show mis productos -->
 				<div class="col-12 col-sm-6 col-lg-3" id="cajaProfileProductos123">
 					<section class="product-box">
-						<a href="/product/id/<%= productos[i].id %> ">
+						<a href="/product/id/<%= usuario.productoDeUsuario[i].id %> ">
 							<figure class="product-box_image">
-								<img class="product-box-image-image"src="<%= productos[i].foto %> " alt="cafetera moulinex">
+								<img class="product-box-image-image"src="/images/products/<%= usuario.productoDeUsuario[i].foto %> " alt="cafetera moulinex">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= productos[i].nombre%></h2>
-								<p><%= productos[i].desc%></p>
-								<p>Comentarios: 12</p>
+								<h2><%= usuario.productoDeUsuario[i].nombre%></h2>
+								<p><%= usuario.productoDeUsuario[i].descripcion%></p>
 							</article>
 						</a>
 					</section>
 				</div>
-		<% } %>
+		<% }} %>
+	
 		</div>
 	</div>
 	<!-- /Mis productos -->

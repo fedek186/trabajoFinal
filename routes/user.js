@@ -11,9 +11,12 @@ let storage = multer.diskStorage({
     destination : function (req, file, cb) {
         cb(null, path.join(__dirname, '../public/images/users'));
     },
+    //* envía los archivos a public/images/users 
+
     filename : function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
+    //* renombra el archivo con tal de que sea único. 
 }); 
 
 let upload = multer({storage : storage })
@@ -29,7 +32,7 @@ router.post('/login', userController.procesarLogin);
 //*LOGOUT 
 router.post('/logout', userController.logout);
 //*SHOW USER
-router.get('/', userController.show);
+router.get('/:id', userController.show);
 //*EDIT USER
 router.get('/edit' , userController.edit);
 router.post('/edit', userController.procesarEdit);

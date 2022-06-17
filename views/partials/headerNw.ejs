@@ -6,10 +6,12 @@
         <% } %>
         <% if (locals.user != undefined) { %> 
             <section class="postUser">
-                <a href="/user/logout"> <img class='logout' src="/images/icons/log_out.svg"> </a>  <!-- esta en get por eso no funciona el lofout-->
                 <h2 class="bienvenida"> Hola <%= locals.user.nombre_usuario %> </h2> 
-                <a class="cuenta" href="/user/logout"> Cuenta </a>
+                <a class="cuenta" href="/user/<%= locals.user.id %>"> Mi perfil </a>
                 <a class="btnAgregarProd" href="/product/add"> Agregar producto </a>
+                <form action="/user/logout" method="post">
+                    <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
+                </form>
             </section>
         <% } %>  
        

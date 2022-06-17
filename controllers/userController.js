@@ -10,7 +10,7 @@ let userController = {
     },
     procesarRegister : function(req, res) {
       let info = req.body; 
-      imgPerfil = req.file.filename;
+      let imgPerfil = req.file.filename;
       let filtroRegister = {where: [ { email: info.email}]};
       let errors = {};
       if (info.email == "") {
@@ -98,8 +98,20 @@ let userController = {
         }
       },
       show : function(req, res) {
-        res.send('Mostrar usuario')
-      },
+        let idUsuario = req.params.id;
+
+        let relacion = { 
+          include: [{association: "productoDeUsuario"}]
+      };
+
+        Usuario.findByPk(idUsuario,relacion )
+        .then((results) => {
+          res.render("profile", { usuario: results });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+        },
       edit : function(req, res) {
         res.send('Mostrar edit usuario')
       },
