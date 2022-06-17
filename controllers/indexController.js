@@ -8,24 +8,33 @@ const productos = {
     comentarios: "Hola"
   }]
 }
-/*
-const db = require("../database/models");
-const movie = db.Movie;  El alias que le pongo a mi modelo 
-const op = db.Sequelize.Op; */
 
 /*let indexController = {
   index: function (req, res) {
     /* return res.render('index', {products: productos}); */
-    /*res.render('header'); //* aca renderize el header para ver si la session estaba funcionando
+/*res.render('header'); //* aca renderize el header para ver si la session estaba funcionando
   }
 };*/
 
+//!ME QUEDA PEDIR LA BASE DE DATOS ARMAR UN PAR DE PROD CON FOTOS PARA METER Y LISTOO Y TERMINAR LO DE BUSQUDAA.
+const db = require('../database/models');
+const producto = db.Producto;
+const op = db.Sequelize.Op;
 let indexController = {
-  index: function (req, res) {
+  /* index: function (req, res) {
     return res.render('index', {
       products: productos
     });
-    // res.send(productos)
+  }, */
+  findAll: (req, res) => {  
+    producto.findAll({})
+      .then((result) => {
+        // res.send(result)
+        return res.render('index', {
+          resultados: result,
+          products: productos
+        })
+      })
   }
 };
 

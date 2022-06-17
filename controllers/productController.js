@@ -45,7 +45,7 @@ let productController = {
         res.locals.error = errors.message; */
       res.redirect("/product/add");
     } else if (productoAcrear.foto == "") {
-       /* errors.message = "Foto de producto no puede estar vacio";
+      /* errors.message = "Foto de producto no puede estar vacio";
       res.locals.error = errors.message; */
       res.redirect("/product/add");
     } else if (productoAcrear.desc == "") {

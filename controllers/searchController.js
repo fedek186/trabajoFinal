@@ -9,30 +9,26 @@ const producto = db.Producto;
 const op = db.Sequelize.Op;
 
 let searchController = {
-    index: function (req, res) {
+    index: (req, res) => {
         let buscada = req.query.search;
         producto.findAll({
                 where: {
                     nombre: {
                         [op.like]: "%" + buscada + "%"
                     }
-                }  
-                //* le digo que busque una donde el nombre sea como la buscada y prometo que mando el res cuando lo tenga.
+                } ,
+                /* where: {
+                    descripcion: {
+                        [op.like]: "%" + buscada + "%"
+                    }
+                } */
             })
             .then((result) => {
                 res.render('search-results', {
-                    resultado: result, //*llamo a resultado desde ejs para acceder a valores de result en vista
+                    resultado: result, 
                     palabraBuscada: buscada
                 })
-
-
-                /*res.render('search-results', {
-                    resultado : result           //*llamo a resultado desde ejs para acceder a valores de result en vista
-                })
-                // res.send(result)*/
             })
-
-        //res.send('SBuscador')
     }
 };
 
