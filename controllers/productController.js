@@ -14,15 +14,15 @@ let productController = {
           include: [{ association: "usuarioRelacionado" }],
         },
         {
-          association: "usuarioRelacionado",
+          association: "usuarioRelacionado", //Producto Usuario. Llamo al usuario del producto y lo uso con producto.usariorelacion.columna
         },
       ],
-        order: [['comentarioDeProducto','fecha', 'desc']],    
+        order: [['comentarioDeProducto','fecha', 'desc']] 
     };
 
 
     producto
-      .findByPk(idProducto, relacion, {})
+      .findByPk(idProducto, relacion)
       .then((results) => {
         res.render("product", { producto: results });
       })
