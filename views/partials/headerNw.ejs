@@ -1,23 +1,4 @@
 <header class="contenedorHeader">
-    <section class="regisUserContainer">
-        <% if (locals.user == undefined) { %> 
-        <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
-        <a class="linkContainer" href="/user/register"><img class="regisBtn" src="/images/icons/register-icon.svg" alt="login" srcset=""></a>
-        <% } %>
-        <% if (locals.user != undefined) { %> 
-            <section class="postUser">
-                <h2 class="bienvenida"> Hola <%= locals.user.nombre_usuario %> </h2> 
-                <a class="cuenta" href="/user"> Mi perfil </a>
-                <a class="btnAgregarProd" href="/product/add"> Agregar producto </a>
-                <form action="/user/logout" method="post">
-                    <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
-                </form>
-            </section>
-        <% } %>  
-       
-        <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
-    </section>
-    
     <section class="headerLogo">
         <a class="IconLogo" href="/">
             <img  src="/images/NwLogo.svg" alt="Logo">
@@ -29,4 +10,23 @@
         </button>
         <input type="text" name="search" value="" class="searchInput">
     </form>
+    <section class="regisUserContainer">
+        <% if (locals.user == undefined) { %> 
+        <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
+        <a class="linkContainer" href="/user/register"><img class="regisBtn" src="/images/icons/register-icon.svg" alt="login" srcset=""></a>
+        <% } %>
+        <% if (locals.user != undefined) { %> 
+            <section class="postUser">
+                <h2 class="bienvenida"> Hola <%= locals.user.nombre_usuario %> </h2> 
+                <a class="cuenta" href="/user"> Mi perfil </a>
+                <a class="btnAgregarProd" href="/product/add"> Agregar producto </a>
+                <form action="/user/logout" method="post">
+                    <div class="logout">
+                        <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
+                    </div>
+                </form>    
+            </section>
+        <% } %>  
+        <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
+    </section>
 </header>

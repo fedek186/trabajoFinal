@@ -14,7 +14,7 @@ let userController = {
       let filtroRegister = {where: [ { email: info.email}]};
       let errors = {};
       if (info.email == "") {
-        errors.message = "Hay un error! El mail no puede estar vacio";
+        errors.message = "Hay un error! El mail no puede estar vacio"; 
         res.locals.errors = errors;
         return res.render ("register")
       } else if (info.password < 3) {
