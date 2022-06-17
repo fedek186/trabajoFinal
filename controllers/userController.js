@@ -10,7 +10,7 @@ let userController = {
     },
     procesarRegister : function(req, res) {
       let info = req.body; 
-      imgPerfil = req.file.filename;
+      let imgPerfil = req.file.filename;
       let filtroRegister = {where: [ { email: info.email}]};
       let errors = {};
       if (info.email == "") {
