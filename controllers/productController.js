@@ -10,18 +10,19 @@ let productController = {
     let relacion = {
       include: [
         {
-          association: "comentarioDeProducto", //traer los datos de manera descendente y tampoco se esto
+          association: "comentarioDeProducto", 
           include: [{ association: "usuarioRelacionado" }],
         },
         {
           association: "usuarioRelacionado",
         },
       ],
+        order: [['comentarioDeProducto','fecha', 'desc']],    
     };
 
 
     producto
-      .findByPk(idProducto, relacion, {order: [['comentarioDeProducto.fecha','ASC']]})
+      .findByPk(idProducto, relacion, {})
       .then((results) => {
         res.render("product", { producto: results });
       })
@@ -130,7 +131,7 @@ let productController = {
       } else {
         comentario.create({
           comentario: comentarioAcrear.desc,
-          fecha: Date.toISOString(), //Forma de obtener la fecha actual
+          fecha: Date.now(), //Forma de obtener la fecha actual
           id_usuario: req.session.user.id,
           id_producto: idProducto,
         }); 
