@@ -45,6 +45,7 @@ let productController = {
   procesarEdit: function (req, res) {
     let productoAeditar = req.body;
     let idProducto = req.params.id;
+    let imgProductoEditar = req.file.filename;
     if (req.session.user != undefined) {
       if (productoAeditar.nombre == "") {
         /* errors.message = "Nombre de producto no puede estar vacio";
@@ -64,7 +65,7 @@ let productController = {
         res.redirect("/product/id/edit/" + idProducto);
       } else {
         producto.update({
-          foto: productoAeditar.foto,
+          foto: imgProductoEditar,
           nombre: productoAeditar.nombre,
           descripcion: productoAeditar.desc,
           fecha: productoAeditar.date,
@@ -87,6 +88,7 @@ let productController = {
   },
   procesarAdd: function (req, res) {
     let productoAcrear = req.body;
+    let imgProducto = req.file.filename;
     if (req.session.user != undefined) {
       if (productoAcrear.nombre == "") {
         /* errors.message = "Nombre de producto no puede estar vacio";
@@ -106,7 +108,7 @@ let productController = {
         res.redirect("/product/add");
       } else {
         producto.create({
-          foto: productoAcrear.foto,
+          foto: imgProducto,
           nombre: productoAcrear.nombre,
           descripcion: productoAcrear.desc,
           fecha: productoAcrear.date,
