@@ -35,7 +35,6 @@ let productController = {
     producto
     .findByPk(idProducto)
     .then((results) => {
-      console.log(results)
       res.render("product-edit", { producto: results });
     })
     .catch((err) => {
@@ -45,15 +44,11 @@ let productController = {
   procesarEdit: function (req, res) {
     let productoAeditar = req.body;
     let idProducto = req.params.id;
-    let imgProductoEditar = req.file.filename;
+    let imgProductoEditar = null;
     if (req.session.user != undefined) {
       if (productoAeditar.nombre == "") {
         /* errors.message = "Nombre de producto no puede estar vacio";
         res.locals.error = errors.message; */
-        res.redirect("/product/id/edit/" + idProducto);
-      } else if (productoAeditar.foto == "") {
-        /* errors.message = "Foto de producto no puede estar vacio";
-      res.locals.error = errors.message; */
         res.redirect("/product/id/edit/" + idProducto);
       } else if (productoAeditar.desc == "") {
         /* errors.message = "Descripcion de producto no puede estar vacio";
@@ -64,7 +59,30 @@ let productController = {
       res.locals.error = errors.message; */
         res.redirect("/product/id/edit/" + idProducto);
       } else {
-        producto.update({
+        if (req.file == undefined) {
+          producto
+          .findByPk(idProducto)
+          .then((results) => {
+            console.log(results.dataValues.foto, 'FEDEEEE')
+            imgProductoEditar =  results.dataValues.foto;      
+            producto.update({
+              foto: imgProductoEditar,
+              nombre: productoAeditar.nombre,
+              descripcion: productoAeditar.desc,
+              fecha: productoAeditar.date,
+            },
+            {
+              where: {
+                id:idProducto,
+              }
+            });
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+         } else {
+          imgProductoEditar = req.file.filename; 
+          producto.update({
           foto: imgProductoEditar,
           nombre: productoAeditar.nombre,
           descripcion: productoAeditar.desc,
@@ -74,7 +92,8 @@ let productController = {
           where: {
             id:idProducto,
           }
-        });
+        });};
+        
         res.redirect("/product/id/" + idProducto);
       }
     } else {

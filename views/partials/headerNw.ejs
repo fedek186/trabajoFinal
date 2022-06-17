@@ -18,7 +18,7 @@
         <% if (locals.user != undefined) { %> 
             <section class="postUser">
                 <h2 class="bienvenida"> Hola <%= locals.user.nombre_usuario %> </h2> 
-                <a class="cuenta" href="/user"> Mi perfil </a>
+                <a class="cuenta" href="/user/<%= locals.user.id %>"> Mi perfil </a>
                 <a class="btnAgregarProd" href="/product/add"> Agregar producto </a>
                 <form action="/user/logout" method="post">
                     <div class="logout">

@@ -32,7 +32,7 @@ router.post('/login', userController.procesarLogin);
 //*LOGOUT 
 router.post('/logout', userController.logout);
 //*SHOW USER
-router.get('/', userController.show);
+router.get('/:id', userController.show);
 //*EDIT USER
 router.get('/edit' , userController.edit);
 router.post('/edit', userController.procesarEdit);

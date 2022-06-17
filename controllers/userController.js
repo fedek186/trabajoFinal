@@ -98,9 +98,20 @@ let userController = {
         }
       },
       show : function(req, res) {
-        Usuario
-        res.send('Mostrar usuario')
-      },
+        let idUsuario = req.params.id;
+
+        let relacion = { 
+          include: [{association: "productoDeUsuario"}]
+      };
+
+        Usuario.findByPk(idUsuario,relacion )
+        .then((results) => {
+          res.render("profile", { usuario: results });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+        },
       edit : function(req, res) {
         res.send('Mostrar edit usuario')
       },
