@@ -12,16 +12,30 @@
 	<section class="product-detailNW">
 		<article class="product-product">
 			<img src="<%= producto.foto%>" class="product-img">
+			<div class="container-info-username">
+			 
+			<div class="container-user-opciones">
+				<h4 class="product-username"><%= producto.usuarioRelacionado.nombre_usuario%></h4>
+				<%   if(locals.user != undefined) { %>
+				<% if(locals.user.id == producto.usuarioRelacionado.id) { %>
+				<div class="opciones-product-user">
+					<a  href="./edit/<%= producto.id %>"  class="opcionesProduct"><img src="/images/icons/icon-edit.svg" ></a>
+					<a href="./delete/<%= producto.id %>" class="opcionesProduct"><img src="/images/icons/delete.svg" ></a>
+				</div>
+				<%}%>
+				<%}%>
+			</div>
+			
 			<div class="container-info">
 				<h3 class="product-name"> [<%= producto.nombre %>] </h3>
 				<p class="product-desc"> <%= producto.descripcion%> </p>
-				<a  href="/product/add"class="linkAddProd"><img src="/images/icons/icon-add.svg" class="add-product"></a>
+			</div>
 			</div>
 		</article>
 		<section class="coments-container">
 			<article class="titulos-comentarios">
 				<h2 class="comentarios-title">Comentarios</h2>
-				<img src="/images/icons/icon-add.svg" class="add-coment">
+				<p> <%= producto.id%></p>
 			</article>
 			<section class="lista-comentarios">
 				<% for( let i = 0; i < producto.comentarioDeProducto.length; i++ ) { %>
@@ -33,11 +47,17 @@
 						</div>
 					</article>	
 				<% } %>
-			</section>			
+			</section>	
+			<% if(locals.user != undefined) { %>
+				<h3 class="titleAddComent">Agrega el tuyo</h3>
+				<form action="./addComent/<%= producto.id %>" method="POST" class="formAddComent">
+					<input name="desc" type="text" class="inputAddComent" placeholder="Agrega tu comentario">
+					<input name="submitComent" type="submit" class="btn-addComent">						
+				</form>		
+			 <% } %>
 		</section>
 	</section> 
-		<% console.log(producto.comentarioDeProducto, 'Fedededede') %> 
-
+	
 
 		
 	<!-- /product detail -->

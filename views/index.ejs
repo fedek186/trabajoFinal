@@ -4,7 +4,11 @@
 <%- include('./partials/head.ejs') %> 
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerNw.ejs') %> 
+	<% if (locals.user != undefined) { %>
+		<%- include('./partials/headerNwLogueado.ejs') %> 
+	<% } else {%>
+		<%- include('./partials/headerNw.ejs') %> 
+	<% } %> 
 	
 	<!-- /Header -->
 	<section class="banners">

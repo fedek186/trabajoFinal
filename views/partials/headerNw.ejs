@@ -1,20 +1,24 @@
 <header class="contenedorHeader">
     <section class="regisUserContainer">
+        <% if (locals.user == undefined) { %> 
         <a class="linkContainer" href="/user/login"><img class="userBtn" src="/images/icons/user-icon.svg" alt="userLogin" srcset=""></a>
         <a class="linkContainer" href="/user/register"><img class="regisBtn" src="/images/icons/register-icon.svg" alt="login" srcset=""></a>
-        <form action="/user/logout" method="post">
-            <button name="logout" type="submit" class="enviarButton">LOGOUT</button>
-        </form>
-        <p> <% if (locals.user != undefined) { %> 
-            <h1> Bienvenido <%= locals.user.nombre_usuario %> </p> 
-            <% } %>  
-        </p>
+        <% } %>
+        <% if (locals.user != undefined) { %> 
+            <section class="postUser">
+                <a href="/user/logout"> <img class='logout' src="/images/icons/log_out.svg"> </a>  <!-- esta en get por eso no funciona el lofout-->
+                <h2 class="bienvenida"> Hola <%= locals.user.nombre_usuario %> </h2> 
+                <a class="cuenta" href="/user/logout"> Cuenta </a>
+                <a class="btnAgregarProd" href="/product/add"> Agregar producto </a>
+            </section>
+        <% } %>  
+       
         <!-- El locals.user es el mismo para las cookies y para los session. Esto se hace para que si se cae la session, las cookies tomen el lugar-->
     </section>
     
     <section class="headerLogo">
-        <a href="/">
-            <img src="/images/NwLogo.svg" alt="Logo">
+        <a class="IconLogo" href="/">
+            <img  src="/images/NwLogo.svg" alt="Logo">
         </a>
     </section>
     <form class="formularioBusqueda" action="/search" method="GET">

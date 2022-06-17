@@ -7,12 +7,16 @@
 	<%- include('./partials/headerNw.ejs') %> 
 	
 	<!-- /Header -->
-
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title" id="ingresar">Iniciar Sesion</h2>
+			</div>
+			<div>
+				<% if (locals.errors) { %>
+					<p style="color: red;"><%= locals.errors.message %> </p>
+				<% } %> 
 			</div>
 			<!-- Show the "ultimos" products -->
 			
@@ -21,13 +25,13 @@
 					<div class="containerLogin">
 						<!--*USERNAME-->
 						<div class="usuarioLogin">
-							<label id="idDelBreak"> UserName</label>
-							<input name="username" type="text" placeholder="Username" required>
+							<label id="idDelBreak"> Email</label>
+							<input name="email" type="text" placeholder="Email">
 						</div>
 						<!--*PASSWORD-->
 						<div class="passwordBox">
-							<label id="idDelBreak"> Password   </label>
-							<input id="passwordInput" type="password" name="password" placeholder="Password" required>
+							<label id="idDelBreak"> Password </label>
+							<input id="passwordInput" type="password" name="password" placeholder="Password">
 						</div>
 						<!--*REMINDBOX-->
 						<div class="remindBox">

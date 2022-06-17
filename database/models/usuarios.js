@@ -36,7 +36,7 @@ module.exports = function (sequelize, dataTypes) {
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     }
 
-
+//Agregar CreatedAt y Upadated At yt Relacion co productoas
 
 const Usuario = sequelize.define(alias, cols, config);
 
@@ -44,8 +44,12 @@ const Usuario = sequelize.define(alias, cols, config);
         Usuario.hasMany(models.Comentario, {
             as: 'comentarioDeUsuario',
             foreignKey: 'id_usuario'
+        }) ,
+        Usuario.hasMany(models.Producto, {
+            as: 'productoDeUsuario',
+            foreignKey: 'id_usuario'
         }) 
-    }
+    } 
 
     return Usuario;
 }
