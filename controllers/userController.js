@@ -98,6 +98,7 @@ let userController = {
         }
       },
       show : function(req, res) {
+        Usuario
         res.send('Mostrar usuario')
       },
       edit : function(req, res) {
