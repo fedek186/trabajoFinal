@@ -47,8 +47,8 @@ let productController = {
     let imgProductoEditar = null;
     if (req.session.user != undefined) {
       if (productoAeditar.nombre == "") {
-        /* errors.message = "Nombre de producto no puede estar vacio";
-        res.locals.error = errors.message; */
+         errors.message = "Nombre de producto no puede estar vacio";
+        res.locals.errorProd = errors.message; 
         res.redirect("/product/id/edit/" + idProducto);
       } else if (productoAeditar.desc == "") {
         /* errors.message = "Descripcion de producto no puede estar vacio";
@@ -107,13 +107,13 @@ let productController = {
   },
   procesarAdd: function (req, res) {
     let productoAcrear = req.body;
-    let imgProducto = req.file.filename;
+    let imgProducto = null;
     if (req.session.user != undefined) {
       if (productoAcrear.nombre == "") {
         /* errors.message = "Nombre de producto no puede estar vacio";
         res.locals.error = errors.message; */
         res.redirect("/product/add");
-      } else if (productoAcrear.foto == "") {
+      } else if (req.file == undefined) {
         /* errors.message = "Foto de producto no puede estar vacio";
       res.locals.error = errors.message; */
         res.redirect("/product/add");
@@ -126,6 +126,7 @@ let productController = {
       res.locals.error = errors.message; */
         res.redirect("/product/add");
       } else {
+        imgProducto = req.file.filename;
         producto.create({
           foto: imgProducto,
           nombre: productoAcrear.nombre,
@@ -138,7 +139,7 @@ let productController = {
     } else {
       /* errors.message = "Fecha de producto no puede estar vacio";
       res.locals.error = errors.message; */
-      res.redirect("/product/add");
+      res.redirect("/user/login");
     }
   },
   addComent: (req, res) => {
@@ -164,6 +165,11 @@ let productController = {
   },
   deleteProd: (req, res) => {
     let idProducto = req.params.id;
+    comentario.destroy({
+      where: {
+        id_producto: idProducto
+      }
+    })
     producto.destroy({
       where: {
         id: idProducto

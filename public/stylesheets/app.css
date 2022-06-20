@@ -619,7 +619,8 @@ textarea.form-input {
   margin-left: 70%;
   margin-bottom: 30%;
   margin-top: 10%;
-  font-family: "Robot Roc";
+  font-family: 'Questrial', sans-serif";
+  
 }
 /**apartado de texto del form login*/
 /*todo: apartado User*/
@@ -663,6 +664,7 @@ textarea.form-input {
 .checkBox{
   height: 17px;
   width: 17px;
+  cursor: pointer;
 } 
 
 .sendForm{
@@ -675,6 +677,7 @@ textarea.form-input {
   color: #EE541B;
   background: none;
   font-size: 20px;
+  cursor: pointer;
 }
 
 
@@ -711,7 +714,8 @@ textarea.form-input {
   flex-direction: column;
   margin-left: 10%;
   transform: skew(-10deg);
-  font-family: 'Robot Roc';
+  font-family: 'Questrial', sans-serif;
+  font-weight: lighter;
 }
 .containerRegister input:placeholder-shown{
   font-size: 10px;
@@ -738,11 +742,17 @@ textarea.form-input {
 .enviarButton{
   width: 20%;
   font-size: large;
-  font-weight: 600;
+  font-weight: 400;
   margin-left: 80%;
   color: #EE541B;
   background: none;
-  font-family: 'Robot Roc';
+  font-family: 'Questrial', sans-serif;
+  cursor: pointer;
+  ;
+}
+.enviarButton:hover {
+  color:#e04b14;
+
 }
 
 .emailBox input{
@@ -846,11 +856,12 @@ textarea.form-input {
   display: flex;
   justify-content: center;
   width:50%;
+  margin-left: -15%;
 }
 
 .IconLogo{
-  width:15%;
-  margin-right:5%;
+  width:17%;
+  margin-left: -60px;
 }
 
 /*postLogin*/
@@ -868,17 +879,30 @@ textarea.form-input {
 
 .bienvenida {
   color: #EE541B; ;
+  font-size: large;
+  font-weight: 400;
   font-family: 'Questrial', sans-serif;
+  margin-right: 60px;
 }
 
 .cuenta{
   color: #EE541B; ;
-  font-family: 'Robot Roc';
+  font-family: 'Questrial', sans-serif;
+  margin-right: 60px;
+  font-size: large;
+  font-weight: 400;
 }
-
+.cuenta:hover {
+  color:#e04b14;
+}
 .btnAgregarProd{
   color: #EE541B; ;
-  font-family: 'Robot Roc';
+  font-family: 'Questrial';
+  margin-right: 24px;
+  font-size: large;
+}
+.btnAgregarProd:hover {
+  color:#e04b14;
 }
 
 /*seccion busqueda*/
@@ -893,19 +917,25 @@ textarea.form-input {
 .formularioBusqueda{
   display: flex;
   align-items: center;
-  width:20%;
+  width:45%;
+  margin-left: -220px;
+  margin-right: 20px;
   background-color:white;
- 
+  transform: scaleY(0.72);
 }
 .botonBusqueda{
   background-color: #EE541B;
   padding:3%;
-
+  cursor: pointer;
 }
 .botonBusqueda img{
   width: 60%;
 }
-
+.botonBusqueda:hover{
+  background-color: #db4d19;
+  padding:3%;
+  cursor: pointer;
+}
 .listaBusqueda{
   display: flex;
   flex-direction: column;

@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const session = require('express-session')
+const session = require('express-session');
+
 
 //* Requerimiento de DB
 const db = require('./database/models');

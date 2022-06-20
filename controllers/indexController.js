@@ -31,7 +31,7 @@ let indexController = {
           products: productos
         })
       })
-  }
+  } 
 };
 
 module.exports = indexController;
