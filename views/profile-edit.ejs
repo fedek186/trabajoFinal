@@ -16,29 +16,46 @@
 			</div>
 		</div>
 			<!-- Show the "ultimos" products -->
-			<form action="" method="get">
-				<div class="containerLogin" id="centrandoCaja-profile-edit">
-					<div class="profile-edit-box">
-						<label id="idDelBreak">Foto de perfil</label>
-						<input type="file" name="fotoPerfil">
+			<div class="contenedorPrinProd"> 
+				<form action="" method="POST" enctype="multipart/form-data">
+					<div class="containerProduct">
+						<br>
+						<div class="fotoBox">
+							<label>Foto de perfil</label>
+							<input type="file" name="fotoEditar" value="-">
+						</div>
+						<br>
+						<div class="nombreBox">
+							<label>Nombre de usuario</label>
+							<input type="text" value=" <%= usuario. nombre_usuario %> " name="usuario">
+						</div>
+						<br>
+						<div class="nombreBox">
+							<label>Email</label>
+							<input type="text" value=" <%= usuario.email %> " name="email">
+						</div>
+						<br>
+						<div class="nombreBox">
+							<label>Contraseña</label>
+							<input type="password" value="<%= usuario.contrasenia %>" name="contraseña">
+						</div>
+						<br>
+						<div class="nombreBox">
+							<label>DNI</label>
+							<input type="number" value="<%= usuario.dni %>" placeholder="" name="dni">
+						</div>
+						<br>
+						<div class="fechaBox">
+							<p>Fecha de nacimiento</p>
+							<input type="date" value="<%= usuario. fecha_nacimiento %>" name="date">
+						</div> 
+						<br>
+						<div class="nombreBox">
+							<input type="submit" value="Enviar">
+						</div>
 					</div>
-					<div class="profile-edit-box">
-						<label id="idDelBreak">Nombre de usuario</label>
-						<input type="text" value=" <%= usuario. nombre_usuario %> " name="usuario">
-					</div>
-					<div class="profile-edit-box">
-						<label id="idDelBreak">Contraseña</label>
-						<input type="password" value="<%= usuario.contrasenia %>" name="contraseña">
-					</div>
-					<div class="profile-edit-box">
-						<label id="idDelBreak">DNI</label>
-						<input type="text" value="<%= usuario.dni %>" placeholder="" name="dni">
-					</div>
-					<div class="profile-edit-box" id="enviar">
-						<input type="submit" value="Enviar">
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 	</div>
 
 	<!-- footer -->
