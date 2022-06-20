@@ -35,5 +35,5 @@ router.post('/logout', userController.logout);
 router.get('/:id', userController.show);
 //*EDIT USER
 router.get('/edit/id/:id' , userController.edit);
-router.post('/edit/id/:id', userController.procesarEdit);
+router.post('/edit/id/:id',upload.single('fotoEditar'), userController.procesarEdit);
 module.exports = router;
