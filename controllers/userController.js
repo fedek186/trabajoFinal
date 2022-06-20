@@ -98,10 +98,11 @@ let userController = {
         }
       },
       show : function(req, res) {
+
         let idUsuario = req.params.id;
 
         let relacion = { 
-          include: [{association: "productoDeUsuario"}]
+          include: [{association: "productoDeUsuario"},{association: "comentarioDeUsuario"},{association: "seguidorXseguidos"} ]
       };
 
         Usuario.findByPk(idUsuario,relacion )
@@ -113,7 +114,14 @@ let userController = {
         });
         },
       edit : function(req, res) {
-        res.send('Mostrar edit usuario')
+        let idUsuario = req.params.id;
+        let user = null;
+        Usuario.findByPk(idUsuario).
+        then((result) => {
+          user = result.dataValues;
+          res.render('profile-edit', {usuario: user})
+        }).
+        catch((err) => {console.error(err);})
       },
       procesarEdit : function(req, res) {
         res.send('procesar Edit usuario')

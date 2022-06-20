@@ -12,7 +12,10 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title" id="agregarProductos">Mis productos</h2>
+				<h2 class="products-title" id="agregarProductos">Agregar producto</h2>
+				<% if(locals.error != undefined) { %> 
+				<p><%=locals.error %></p>
+				<% } %>
 			</div>
 			<!-- Show the "ultimos" products -->
 		<div class="contenedorPrinProd"> 

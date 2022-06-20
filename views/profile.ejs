@@ -19,7 +19,7 @@
 					<h1 class="main-title" id="main-title-profile"> <%= usuario. nombre_usuario %> 
 						<%   if(locals.user != undefined) { %>
 							<% if(locals.user.id == usuario.id) { %>
-						<a href="/profile/edit">
+						<a href="/user/edit/id/<%= usuario.id%>">
 							<img src="/images/icons/icon-edit.svg">
 						</a>
 						<% }}%>
@@ -29,9 +29,9 @@
 				<div class="div-profile-datos">
 					<ul class="" id="datos-caja-profile">
 						<p> <%= usuario.email %> <p>
-						<li class="ordenando-li-profile"> 8 productos</li>
+						<li class="ordenando-li-profile"> <%= usuario.productoDeUsuario.length %>  productos</li>
 						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico">200 seguidores</li>
-						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico">300 comentarios</li>
+						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico"><%= usuario.comentarioDeUsuario.length %> comentarios</li>
 					</ul>
 				</div>
 			</div>

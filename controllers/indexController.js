@@ -26,7 +26,7 @@ let indexController = {
       products: productos
     });
   }, */
-  findAll: (req, res) => {  
+   findAll: (req, res) => {  
     producto.findAll({})
       .then((result) => {
         // res.send(result)
@@ -35,7 +35,7 @@ let indexController = {
           products: productos
         })
       })
-  }
+  } 
 };
 
 module.exports = indexController;

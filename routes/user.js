@@ -34,6 +34,6 @@ router.post('/logout', userController.logout);
 //*SHOW USER
 router.get('/:id', userController.show);
 //*EDIT USER
-router.get('/edit' , userController.edit);
-router.post('/edit', userController.procesarEdit);
+router.get('/edit/id/:id' , userController.edit);
+router.post('/edit/id/:id', userController.procesarEdit);
 module.exports = router;
