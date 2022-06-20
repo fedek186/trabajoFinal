@@ -17,11 +17,7 @@ let searchController = {
                         [op.like]: "%" + buscada + "%"
                     }
                 } ,
-                /* where: {
-                    descripcion: {
-                        [op.like]: "%" + buscada + "%"
-                    }
-                } */
+                include: [{association:"usuarioRelacionado"}]
             })
             .then((result) => {
                 res.render('search-results', {

@@ -18,15 +18,17 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<div class="resultadosBusqueda">
-				<div class="cardSlide">
+				<div class="cardSlideBusqueda">
 					<% for (let i = 0; i < resultado.length ; i++) {%> 
 						<a class="cardBusqueda" href="/product/id/<%= resultado[i].id%>">
 						<div class="img-container">
-							<img class = "productImg" src="<%= resultado[i].foto %>" alt="Product">
+							<img class = "productImg" src="/images/products/<%= resultado[i].foto %>" alt="Product">
 						</div>
 						<div class="textContainer">
 							<p class="nameProduct">
 								[<%= resultado[i].nombre%>]
+								<br>
+								Updated By: <%= resultado[i].usuarioRelacionado.nombre_usuario%> 
 							</p>
 						</div>
 						</a>
