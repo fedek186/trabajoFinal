@@ -24,7 +24,7 @@ let upload = multer({storage : storage })
 //*rutas
 
 //* REGISTER ROUTER
-router.get('/register', userController.register); //! hay que definir las prop del userController.
+router.get('/register', userController.register); 
 router.post('/register', upload.single('profilePic'), userController.procesarRegister); //* Img perfil es el name del formulario
 //*LOGIN ROUTER
 router.get('/login', userController.login);
