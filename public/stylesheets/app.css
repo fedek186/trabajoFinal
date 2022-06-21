@@ -151,7 +151,7 @@ hr {
 }
 
 .logout:hover{
-  color: #1259c3;
+  color:#bc4013;
 }
 
 .left-navbar a,
@@ -751,7 +751,7 @@ textarea.form-input {
   ;
 }
 .enviarButton:hover {
-  color:#e04b14;
+  color:#bc4013;
 
 }
 
@@ -810,10 +810,11 @@ textarea.form-input {
 }
 .nombreBox input{
   height: 20px;
-  font-family: 'Robot Roc';
+  font-family: 'Questrial', sans-serif;
 } 
 .descripcionBox input{
   height: 50px;
+  font-family: 'Questrial', sans-serif;
 }
 
 /*====== Header ======*/
@@ -839,14 +840,16 @@ textarea.form-input {
   width:100%;
   align-items: center;
   display: flex;
+  margin-left: -50px;
 }
 .userBtn {
-  width: 15%;
+  width: 14%;
+  margin-left: 90px;
 }
 .regisBtn {
-  width: 15%; 
+  width: 14%; 
+  margin-left: 150px;
 }
-
 .headerUserName {
   color: #EE541B; ;
 }
@@ -893,7 +896,7 @@ textarea.form-input {
   font-weight: 400;
 }
 .cuenta:hover {
-  color:#e04b14;
+  color:#bc4013;
 }
 .btnAgregarProd{
   color: #EE541B; ;
@@ -902,7 +905,7 @@ textarea.form-input {
   font-size: large;
 }
 .btnAgregarProd:hover {
-  color:#e04b14;
+  color:#bc4013;
 }
 
 /*seccion busqueda*/

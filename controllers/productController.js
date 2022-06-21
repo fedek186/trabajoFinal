@@ -60,26 +60,17 @@ let productController = {
         res.redirect("/product/id/edit/" + idProducto);
       } else {
         if (req.file == undefined) {
-          producto
-          .findByPk(idProducto)
-          .then((results) => {
-            console.log(results.dataValues.foto, 'FEDEEEE')
-            imgProductoEditar =  results.dataValues.foto;      
             producto.update({
-              foto: imgProductoEditar,
               nombre: productoAeditar.nombre,
               descripcion: productoAeditar.desc,
-              fecha: productoAeditar.date,
+              fecha: productoAeditar.date
             },
             {
               where: {
                 id:idProducto,
               }
-            });
-          })
-          .catch((err) => {
-            console.error(err);
-          });
+            }
+            )   
          } else {
           imgProductoEditar = req.file.filename; 
           producto.update({

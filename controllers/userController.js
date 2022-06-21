@@ -102,7 +102,7 @@ let userController = {
         let idUsuario = req.params.id;
 
         let relacion = { 
-          include: [{association: "productoDeUsuario"},{association: "comentarioDeUsuario"},{association: "seguidorXseguidos"} ]
+          include: [{association: "productoDeUsuario"},{association: "comentarioDeUsuario"} ]
       };
 
         Usuario.findByPk(idUsuario,relacion )
@@ -124,7 +124,75 @@ let userController = {
         catch((err) => {console.error(err);})
       },
       procesarEdit : function(req, res) {
-        res.send('procesar Edit usuario')
+        let usuarioAeditar = req.body;
+        let idUsuario = req.params.id;
+        let imgUsuarioEditar = null;
+
+        console.log(req.file, 'CONCHA')
+
+        if (req.session.user != undefined) { 
+
+          if (usuarioAeditar.usuario == "") {
+            res.redirect("/user/edit/id/" + idUsuario);
+         } else if (usuarioAeditar.dni == "") {
+           /* errors.message = "Descripcion de producto no puede estar vacio";
+         res.locals.error = errors.message; */
+             res.redirect("/user/edit/id/" + idUsuario);
+         } else if (usuarioAeditar.date == "") {
+           /* errors.message = "Fecha de producto no puede estar vacio";
+         res.locals.error = errors.message; */
+             res.redirect("/user/edit/id/" + idUsuario);
+         } else {
+          Usuario.findAll().
+          then((result)=>{
+            let encontroEmail = false;
+            for (let i = 0; i < result.length; i++) {
+              if(usuarioAeditar.email == result[i].email && idUsuario !=result[i].id ) {
+                encontroEmail = true;
+              }
+            }
+            if (encontroEmail == false) {
+              if(req.file == undefined) {
+
+                Usuario.update({
+                  nombre_usuario: usuarioAeditar.usuario,
+                  email: usuarioAeditar.email,
+                  dni: usuarioAeditar.dni,
+                  fecha_nacimiento: usuarioAeditar.date
+                },
+                {
+                  where: {
+                    id:idUsuario,
+                  }
+                }
+                ) 
+                res.redirect("/user/" + idUsuario);
+              } else {
+                imgUsuarioEditar = req.file.filename;
+                Usuario.update({
+                  nombre_usuario: usuarioAeditar.usuario,
+                  email: usuarioAeditar.email,
+                  dni: usuarioAeditar.dni,
+                  fecha_nacimiento: usuarioAeditar.date,
+                  foto_usuario:imgUsuarioEditar
+                },
+                {
+                  where: {
+                    id:idUsuario,
+                  }
+                }
+                ) 
+                res.redirect("/user/" + idUsuario);
+              }         
+            } else {
+              res.redirect("/user/edit/id/" + idUsuario);
+            }
+          }).
+          catch((err)=>{console.log(err)})
+         }
+        } else {
+          res.redirect("/login")
+        }
       },
 }
 
