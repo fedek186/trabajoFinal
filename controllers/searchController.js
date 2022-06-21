@@ -30,6 +30,3 @@ let searchController = {
 };
 
 module.exports = searchController;
-
-//! me quedan: - si el res de busqueda no tiene resultados. 
-//! - index termino manana. hacer un scroll para los productos. cargar 5 o 6 a base de datos. 
