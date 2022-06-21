@@ -13,9 +13,10 @@ let searchController = {
         let buscada = req.query.search;
         producto.findAll({
                 where: {
-                    nombre: {
-                        [op.like]: "%" + buscada + "%"
-                    }
+                    [op.or]: [
+                        {nombre: {[op.like]: "%" + buscada + "%"}},
+                        {descripcion: {[op.like]: "%" + buscada + "%"}}
+                    ]
                 } ,
                 include: [{association:"usuarioRelacionado"}]
             })
