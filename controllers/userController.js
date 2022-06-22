@@ -65,6 +65,7 @@ let userController = {
           Usuario.findOne(filtroLogin)
           .then((result) => {  
             if (result != null) {
+              //* en este caso, se encontro un mail que coincida con el ingresado por el usuario. 
               let check = bcrypt.compareSync(info.password , result.contrasenia)
               if (check) {
                 req.session.user = result.dataValues;
