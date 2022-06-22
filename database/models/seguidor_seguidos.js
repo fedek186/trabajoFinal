@@ -11,10 +11,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
         },
         id_seguidor: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER,  // El sigue (seguidos). Sigo a 200 person en IG = a 200 id_seguidor
         },
         id_seguido: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER, // A el lo siguen (seguidos). Tengo 500 seguidores en IG = a 500 id_seguido
         }
     }
 
@@ -25,6 +25,17 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     const Seguidor = sequelize.define(alias, cols, config);
+
+    Seguidor.associate = (models) => {
+        Seguidor.belongsTo(models.Usuario, {
+            as: 'seguidor',
+            foreignKey: 'id_seguidor'
+        }) ,
+        Seguidor.belongsTo(models.Usuario, {
+            as: 'seguido',
+            foreignKey: 'id_seguido'
+        })
+    }
 
     return Seguidor;
 }

@@ -54,13 +54,14 @@ const Usuario = sequelize.define(alias, cols, config);
         Usuario.hasMany(models.Producto, {
             as: 'productoDeUsuario',
             foreignKey: 'id_usuario'
-        }) ,
-        Usuario.belongsToMany(models.Usuario, {
-            as: 'seguidorXseguidos',
-            through: 'usuarios',
-            foreignKey: 'id',
-            otherKey: 'id',
-            timestamps: false
+        }),
+        Usuario.hasMany(models.Seguidor, {
+            as: 'sigue',
+            foreignKey: 'id_seguidor'
+        }),
+        Usuario.hasMany(models.Seguidor, {
+            as: 'leSiguen',
+            foreignKey: 'id_seguido'
         })
     } 
 

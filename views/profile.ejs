@@ -24,13 +24,25 @@
 						</a>
 						<% }}%>
 					</h1>
-					<a class="btn mt-3 ml-4" href="" id="angulando-seguir">SEGUIR</a>
+					<% if(locals.user != undefined ) { 
+						if(locals.user.id != usuario.id) {
+						let cont = 0;
+						for (let i = 0; i < usuario.leSiguen.length; i++) { 
+							if(usuario.leSiguen[i].id_seguidor == locals.user.id) {
+								cont = 1;
+							}
+						}
+						if(cont == 1) { %>
+							<a href='/user/seguir/id/<%= usuario.id%>' class="btn mt-3 ml-4" href="" id="angulando-seguir">Dejar de seguir</a>
+					<% } else { %>
+						<a href='/user/seguir/id/<%= usuario.id%>' class="btn mt-3 ml-4" href="" id="angulando-seguir">Seguir</a>
+					<%}}} %> 
 				</div>
 				<div class="div-profile-datos">
 					<ul class="" id="datos-caja-profile">
 						<p> <%= usuario.email %> <p>
 						<li class="ordenando-li-profile"> <%= usuario.productoDeUsuario.length %>  productos</li>
-						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico">200 seguidores</li>
+						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico"><%= usuario.leSiguen.length %> seguidores</li>
 						<li class="ordenando-li-profile" id="ordenando-li-profile-especifico"><%= usuario.comentarioDeUsuario.length %> comentarios</li>
 					</ul>
 				</div>
