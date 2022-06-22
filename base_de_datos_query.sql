@@ -50,7 +50,7 @@ CREATE TABLE `seguidor_seguidos` (
 
 /*Inserts*/
 
-INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('fedekozak', 'fedek@gmail.com', '12345678', '14/11/2002', '44554540', 'fede.jpg');
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('juan', 'juancruz@gmail.com', '$2a$10$nOv/Gmchq69SiYwBKwWjL.P3tlUA23eq.ZdxSNwoQ8ew9fp1FEXBa', '2022-06-24', '44554545', 'profilePic-1655929464793.jpg');
 INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('rafarodri', 'rafarodri@gmail.com', '12345678', '21/12/2011', '50943212', 'rafa.jpg');
 INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('gonazoljimenez', 'gonzajime@gmail.com', '12345678', '15/8/2020', '60431232', 'gonza.jpg');
 
