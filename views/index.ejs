@@ -28,12 +28,8 @@
 							<img class = "productImg" src="/images/products/<%= resultados[i].foto %>" alt="Product">
 						</div>
 						<div class="textContainer">
-							<p class="nameProduct">
-								[<%= resultados[i].nombre%>]
-								<br>
-								Update by: <%= resultados[i].usuarioRelacionado.nombre_usuario %>
-							</p>
-							
+							<p class="nameProduct">[<%= resultados[i].nombre%>]</p>
+							<p class="nameProduct"> Created By: <%= resultados[i].usuarioRelacionado.nombre_usuario %></p>
 						</div>
 						</a>
 					<%}%> 
