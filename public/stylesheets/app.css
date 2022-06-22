@@ -555,6 +555,7 @@ textarea.form-input {
 
 .foto-perfil{
   margin-top: -10px;
+  border-radius: 50px;
 }
 
 .main-title{
@@ -1276,8 +1277,17 @@ height:20%;
   font-family: 'Questrial', sans-serif;
   height:100%;
   width:60%;
-  padding:1%;
-}
+  padding:1%; }
+
+  .btn-addComent {
+   background-color:#EE541B; 
+   color:#000;
+   font-family: 'Robot Roc', sans-serif;
+   padding:1%;
+   height:100%;
+   cursor: pointer;
+  }
+
 
 
 /*====== Media-Queries ======*/
