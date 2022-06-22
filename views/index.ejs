@@ -23,15 +23,15 @@
 				<!--Prod-->
 				<div class="cardSlide">
 					<% for (let i = 0; i < resultados.length ; i++) {%> 
-						<a class="card" href="/product/id/<%= resultados[i].id%>">
-						<div class="img-container">
+						<div class="card" href="/product/id/<%= resultados[i].id%>">
+						<a href="/product/id/<%= resultados[i].id%>" class="img-container">
 							<img class = "productImg" src="/images/products/<%= resultados[i].foto %>" alt="Product">
-						</div>
+						</a>
 						<div class="textContainer">
 							<p class="nameProduct">[<%= resultados[i].nombre%>]</p>
-							<p class="nameProduct"> Created By: <%= resultados[i].usuarioRelacionado.nombre_usuario %></p>
 						</div>
-						</a>
+						<a href="/user/<%= resultados[i].usuarioRelacionado.id%>" class="nameProduct">Created By: <%= resultados[i].usuarioRelacionado.nombre_usuario %></a>
+						</div>
 					<%}%> 
 				</div>
 		</article>
