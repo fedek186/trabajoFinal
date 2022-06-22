@@ -45,20 +45,21 @@ let productController = {
     let productoAeditar = req.body;
     let idProducto = req.params.id;
     let imgProductoEditar = null;
+    let errors = {}
     if (req.session.user != undefined) {
       if (productoAeditar.nombre == "") {
-         errors.message = "Nombre de producto no puede estar vacio";
-        res.locals.errorProd = errors.message; 
-        res.redirect("/product/id/edit/" + idProducto);
+        errors.message = "Nombre de producto no puede estar vacio";
+        res.locals.errors = errors;
+        return res.render('product-edit');
       } else if (productoAeditar.desc == "") {
-        /* errors.message = "Descripcion de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("/product/id/edit/" + idProducto);
-      } else if (productoAeditar.date == "") {
-        /* errors.message = "Fecha de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("/product/id/edit/" + idProducto);
-      } else {
+          errors.message = "Descripcion de producto no puede estar vacio";
+          res.locals.error = errors.message;
+          return res.render('product-edit');
+        } else if (productoAeditar.date == "") {
+          errors.message = "Fecha de producto no puede estar vacio";
+          res.locals.error = errors.message; 
+          return res.render('product-edit');
+        } else {
         if (req.file == undefined) {
             producto.update({
               nombre: productoAeditar.nombre,
@@ -88,9 +89,7 @@ let productController = {
         res.redirect("/product/id/" + idProducto);
       }
     } else {
-      /* errors.message = "Fecha de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-      res.redirect("/product/id/edit/" + idProducto);
+        res.redirect("/user/login");
     }
   },
   add: function (req, res) {
@@ -99,24 +98,21 @@ let productController = {
   procesarAdd: function (req, res) {
     let productoAcrear = req.body;
     let imgProducto = null;
+    let errors = {};
     if (req.session.user != undefined) {
       if (productoAcrear.nombre == "") {
-        /* errors.message = "Nombre de producto no puede estar vacio";
-        res.locals.error = errors.message; */
-        res.redirect("/product/add");
-      } else if (req.file == undefined) {
-        /* errors.message = "Foto de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("/product/add");
+        errors.message = "Nombre de producto no puede estar vacio";
+        res.locals.errors = errors;
+        return res.render('product-add');
       } else if (productoAcrear.desc == "") {
-        /* errors.message = "Descripcion de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("/product/add");
+        errors.message = "Descripción de producto no puede estar vacio";
+        res.locals.errors = errors;
+        return res.render('product-add');
       } else if (productoAcrear.date == "") {
-        /* errors.message = "Fecha de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("/product/add");
-      } else {
+        errors.message = "Fecha de producto no puede estar vacio";
+        res.locals.errors = errors;
+        return res.render('product-add');
+        } else {
         imgProducto = req.file.filename;
         producto.create({
           foto: imgProducto,
@@ -128,20 +124,14 @@ let productController = {
         res.redirect("/");
       }
     } else {
-      /* errors.message = "Fecha de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-      res.redirect("/user/login");
+        res.redirect("/user/login");
     }
   },
   addComent: (req, res) => {
     let comentarioAcrear = req.body;
     let idProducto = req.params.id;
+    let errors = {};
     if (req.session.user != undefined) {
-      if (comentarioAcrear.desc == undefined) {
-        /* errors.message = "Fecha de producto no puede estar vacio";
-      res.locals.error = errors.message; */
-        res.redirect("");
-      } else {
         comentario.create({
           comentario: comentarioAcrear.desc,
           fecha: Date.now(), //Forma de obtener la fecha actual
@@ -149,7 +139,6 @@ let productController = {
           id_producto: idProducto,
         }); 
         res.redirect("/product/id/" + idProducto);
-      }
     } else {
       res.redirect("/product/id/" + idProducto);
     }

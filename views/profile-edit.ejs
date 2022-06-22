@@ -15,6 +15,11 @@
 				<h2 class="products-title" id="products-title-id">Editar mi perfil</h2>
 			</div>
 		</div>
+		<div>
+			<% if (locals.errors) { %>
+				<p style="color: red;"> <%- locals.errors.message %> </p>
+			<% } %>
+		</div>
 			<!-- Show the "ultimos" products -->
 			<div class="contenedorPrinProd"> 
 				<form action="" method="POST" enctype="multipart/form-data">

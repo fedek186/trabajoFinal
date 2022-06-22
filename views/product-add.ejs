@@ -12,9 +12,13 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title" id="agregarProductos">Agregar producto</h2>
-				<% if(locals.error != undefined) { %> 
-				<p><%=locals.error %></p>
+				<h2 class="registerTitle">Agregar producto</h2>
+			</div>	
+		</div>
+		<div class="row">
+			<div> 
+				<% if (locals.errors) { %>
+						<p style="color: red;"> <%- locals.errors.message %> </p>
 				<% } %>
 			</div>
 			<!-- Show the "ultimos" products -->

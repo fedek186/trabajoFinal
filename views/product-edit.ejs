@@ -15,8 +15,13 @@
 				<h2 class="products-title" id="agregarProductos">Mis productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+		<div>
+			<% if (locals.errors) { %>
+				<p style="color: red;"> <%- locals.errors.message %> </p>
+			<% } %>
+		</div>
 		<div class="contenedorPrinProd">
-			<form action="" method="POST" enctype="multipart/form-data"> <!-- Action va vacio porque la ruta dek post es la misma solo que x post -->
+			<form action="/product/id/edit/<%= producto.id %> " method="POST" enctype="multipart/form-data"> <!-- Action va vacio porque la ruta dek post es la misma solo que x post -->
 				<div class="containerProduct"> 	
 					<div class="nombreBox">
 						<p>Nombre</p>

@@ -136,20 +136,23 @@ let userController = {
     let usuarioAeditar = req.body;
     let idUsuario = req.params.id;
     let imgUsuarioEditar = null;
+    let errors = {}
 
     console.log(req.file, "CONCHA");
 
     if (req.session.user != undefined) {
       if (usuarioAeditar.usuario == "") {
-        res.redirect("/user/edit/id/" + idUsuario);
+        res.render('profile-edit')
+        res.locals.error = errors; 
+        res.render('profile-edit');
       } else if (usuarioAeditar.dni == "") {
-        /* errors.message = "Descripcion de producto no puede estar vacio";
-         res.locals.error = errors.message; */
-        res.redirect("/user/edit/id/" + idUsuario);
+        errors.message = "Descripcion de producto no puede estar vacio";
+        res.locals.error = errors; 
+        res.render('profile-edit');
       } else if (usuarioAeditar.date == "") {
-        /* errors.message = "Fecha de producto no puede estar vacio";
-         res.locals.error = errors.message; */
-        res.redirect("/user/edit/id/" + idUsuario);
+        errors.message = "Fecha de producto no puede estar vacio";
+        res.locals.error = errors; 
+        res.render('profile-edit')
       } else {
         Usuario.findAll()
           .then((result) => {
