@@ -8,7 +8,7 @@ let indexController = {
   findAll: (req, res) => {
     let relacion = {
       include: [{association: "usuarioRelacionado"}],
-      order: [['fecha','DESC']]  //! no me deja ordenarlos de manera descendiente. 
+      order: [['fecha','DESC']]  
     }
 
     producto.findAll(relacion)
