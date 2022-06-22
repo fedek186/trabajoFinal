@@ -1040,7 +1040,7 @@ textarea.form-input {
 }
 
 .card {
-    margin-top: 5%;
+    margin: 5% 2% 0% 2%;
     width: 45%;
     height:75%;
     background-color:black;
@@ -1049,7 +1049,10 @@ textarea.form-input {
   height: 100%;
   width: 100%;
   overflow: auto;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
 
 /*RESULTADOS BUSQUEDA*/
 .cardSlideBusqueda{
@@ -1072,16 +1075,17 @@ textarea.form-input {
 
 .img-container {
     height: 85%;
+    width: 100%;
 }
 
 .productImg {
     height: 100%;
+    width: 100%;
     filter: brightness(60%);
 }
 
 .textContainer {
     text-align:center;
-    background-color: rgb(248, 69, 37, 0.5);
     margin: 0%;
 }
 
@@ -1089,7 +1093,7 @@ textarea.form-input {
     color: white; 
     font-size:1.5em;
     font-family: 'Questrial', sans-serif;
-    margin: 3% 0% 0% 0%;
+    margin: 3% 0% 1% 1%;
 }
 /* 
 Carousel */
