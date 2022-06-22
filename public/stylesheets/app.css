@@ -968,14 +968,16 @@ textarea.form-input {
     background-repeat: no-repeat;
     
 }
-
+/*#EE541B*/
 .brandName {
     color: white;
     font-size:8em;
     margin-bottom:0;
     margin-left: 10%;
     font-family: 'Robot Roc', sans-serif;
-
+}
+.brandName:hover{
+  color: #EE541B;
 }
 
 .brandProduct1 {
@@ -983,8 +985,11 @@ textarea.form-input {
     margin-top:3%;
     margin-left: 20%;
     font-family: 'Robot Roc', sans-serif;
-    color: #EE541B;
+    color: white;
     object-fit: contain;
+}
+.brandProduct1:hover{
+  color: #EE541B;
 }
 
 .brandProduct2 {
@@ -995,7 +1000,9 @@ textarea.form-input {
     font-family: 'Robot Roc', sans-serif;
     object-fit: contain;
 }
-
+.brandProduct2:hover{
+  color: #EE541B;
+}
 .brandProduct3 {
     color: white;
     font-size:5em;
@@ -1004,7 +1011,9 @@ textarea.form-input {
     font-family: 'Robot Roc', sans-serif;
     object-fit: contain;
 }
-
+.brandProduct3:hover{
+  color: #EE541B;
+}
 .brandProducts {
     display: flex;
     flex-direction: column;
@@ -1080,7 +1089,7 @@ textarea.form-input {
     color: white; 
     font-size:1.5em;
     font-family: 'Questrial', sans-serif;
-    margin: 5% 0% 0% 0%;
+    margin: 3% 0% 0% 0%;
 }
 /* 
 Carousel */
@@ -1202,9 +1211,10 @@ Carousel */
 
 .lista-comentarios {
   width: 100%;
+  height: 20%;
   display: flex;
-  height:30%;
   flex-wrap: wrap;
+  overflow: auto;
 }
 
 .contianer-comentario {

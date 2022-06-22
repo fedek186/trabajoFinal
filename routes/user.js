@@ -36,4 +36,6 @@ router.get('/:id', userController.show);
 //*EDIT USER
 router.get('/edit/id/:id' , userController.edit);
 router.post('/edit/id/:id',upload.single('fotoEditar'), userController.procesarEdit);
+//*SEGUIR
+router.get('/seguir/id/:id' , userController.seguir);
 module.exports = router;

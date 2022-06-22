@@ -13,12 +13,12 @@ let searchController = {
         let buscada = req.query.search;
         producto.findAll({
                 where: {
-                    [op.or]:  [ 
+                    [op.or]: [
                         {nombre: {[op.like]: "%" + buscada + "%"}},
                         {descripcion: {[op.like]: "%" + buscada + "%"}}
-                    ],
-                },
-                 include: [{association:"usuarioRelacionado"}]
+                    ]
+                } ,
+                include: [{association:"usuarioRelacionado"}]
             })
             .then((result) => {
                 res.render('search-results', {
@@ -30,6 +30,3 @@ let searchController = {
 };
 
 module.exports = searchController;
-
-//! me quedan: - si el res de busqueda no tiene resultados. 
-//! - index termino manana. hacer un scroll para los productos. cargar 5 o 6 a base de datos. 
