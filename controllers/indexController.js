@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const producto = db.Producto;
 
-const op = db.Sequelize.Op;
+
 
 let indexController = {
 

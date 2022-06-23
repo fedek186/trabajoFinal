@@ -14,7 +14,7 @@ let searchController = {
         producto.findAll({
                 where: {
                     [op.or]: [
-                        {nombre: {[op.like]: "%" + buscada + "%"}},
+                        {nombre: {[op.like]: "%" + buscada + "%"}}, //entre medio % incluye palabra. 
                         {descripcion: {[op.like]: "%" + buscada + "%"}}
                     ]
                 } ,
