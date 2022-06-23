@@ -51,12 +51,11 @@ CREATE TABLE `seguidor_seguidos` (
 /*Inserts*/
 
 INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('juan', 'juancruz@gmail.com', '$2a$10$nOv/Gmchq69SiYwBKwWjL.P3tlUA23eq.ZdxSNwoQ8ew9fp1FEXBa', '2022-06-24', '44554545', 'profilePic-1655929464793.jpg');
-INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('rafarodri', 'rafarodri@gmail.com', '12345678', '21/12/2011', '50943212', 'rafa.jpg');
-INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('gonazoljimenez', 'gonzajime@gmail.com', '12345678', '15/8/2020', '60431232', 'gonza.jpg');
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('rafa14', 'rafa@gmail.com', '$2a$10$OkfzJbtRiJudsdYOeQ6ireEkktWu5uTHOcr.CpCu5opzm8iotJepS', '2022-06-23', '44554545', 'profilePic-1655984651346.jpg');
+INSERT INTO `catalogo`.`usuarios` (`nombre_usuario`, `email`, `contrasenia`, `fecha_nacimiento`, `dni`, `foto_usuario`) VALUES ('mateo', 'mateo@gmail.com', '$2a$10$6gmYoWz.VTEACCuCfZufjOU8f.C9iN927gjhZ2FOr8QtS6BR1wFsi', '2022-06-23', '44554545', 'profilePic-1655985086246.jpg');
 
-INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('dior.jpg', 'Jordan Dior', 'Jordan dior', '6/10/2022', '1');
-INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('off.jpg', 'Nike Off White', 'Nike off white', '6/10/2022', '2');
+INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('foto-1655986881556.webp', 'Vans Old Skool', 'Ideales para todo tipo de rutinas y actividades. Su diseño y confort las convierten en el calzado perfecto.  Suela de goma Las zapatillas fabricadas con suela de goma tienen mayor resistencia al desgaste, son naturalmente impermeables y flexibles, y además extienden la estabilidad de la contracción.', '2022-06-23', '1');
+INSERT INTO `catalogo`.`productos` (`foto`, `nombre`, `descripcion`, `fecha`, `id_usuario`) VALUES ('foto-1655987930621.jpg', 'Air Jordan Adapt 11', 'El Air Jordan 11 Adapt ofrece un enfoque único a la zapatilla de baloncesto tradicional. La parte superior está compuesta por su envoltura de charol por excelencia, mientras que se mezcla con un material textil ligero y un Jumpman carmesí en el talón. La entresuela es donde las cosas se ponen interesantes, con botones que se iluminan para ayudar a ajustar el ajuste del zapato al gusto del usuario. Como siempre, la suela tiene una placa de fibra de carbono para mayor estabilidad en la cancha.', '2022-06-23', '2');
 
-INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('Alto producto', '1', '14/11/202', '1');
-INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('Que buen producto', '2', '14/11/2003', '2');
-
+INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('Muy buen produto', '2', '2022-06-23', '1');
+INSERT INTO `catalogo`.`comentarios` (`comentario`, `id_usuario`, `fecha`, `id_producto`) VALUES ('De los mejores productos', '1', '14/11/2003', '1');

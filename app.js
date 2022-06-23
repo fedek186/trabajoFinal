@@ -44,6 +44,16 @@ app.use(function(req,res, next) {
   return next () //* Si no entra en el if que siga al próximo middleware
 });
 
+//* Middleware de session. Debe estar antes de la declaración de las rutas. 
+app.use(function(req,res, next) {
+  //* Aca evaluo la condicion creada en el procesarLogin
+ if(req.session.errors != undefined) {
+   res.locals.errors = req.session.errors;
+   return next ()
+ }
+ return next () //* Si no entra en el if que siga al próximo middleware
+});
+
 //* Middleware de cookies. 
 app.use(function (req,res,next) {
   if (req.cookies.userId != undefined && req.session.user == undefined) {

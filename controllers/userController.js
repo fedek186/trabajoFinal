@@ -11,7 +11,6 @@ let userController = {
   },
   procesarRegister: function (req, res) {
     let info = req.body;
-    let imgPerfil = req.file.filename;
     let filtroRegister = { where: [{ email: info.email }] };
     let errors = {};
     if (info.email == "") {
@@ -22,7 +21,25 @@ let userController = {
       errors.message = `Hay un error! La contraseña debe tener 3 caracteres o más`;
       res.locals.errors = errors;
       return res.render("register");
-    } else {
+    } else if (info.username == '') {
+      errors.message = `Hay un error! El usuario no puede estar vacio`;
+      res.locals.errors = errors;
+      return res.render("register");
+    }  else if (info.dni == '') {
+      errors.message = `Hay un error! El DNI no puede estar vacio`;
+      res.locals.errors = errors;
+      return res.render("register");
+    }  else if (info.email == '') {
+      errors.message = `Hay un error! La fecha no puede estar vacio`;
+      res.locals.errors = errors;
+      return res.render("register");
+    }  
+    else if (req.file == undefined) {
+      errors.message = `Hay un error! no ingreso una imagen`;
+      res.locals.errors = errors;
+      return res.render("register");
+    } 
+    else {
       Usuario.findOne(filtroRegister)
         .then((result) => {
           if (result != null) {
@@ -30,6 +47,7 @@ let userController = {
             res.locals.errors = errors;
             return res.render("register");
           } else {
+            let imgPerfil = req.file.filename;
             let usuario = {
               email: info.email,
               nombre_usuario: info.username,
@@ -121,6 +139,7 @@ let userController = {
       });
   },
   edit: function (req, res) {
+
     let idUsuario = req.params.id;
     let user = null;
     Usuario.findByPk(idUsuario)
@@ -137,22 +156,24 @@ let userController = {
     let idUsuario = req.params.id;
     let imgUsuarioEditar = null;
     let errors = {}
-
-    console.log(req.file, "CONCHA");
-
+    req.session.errors = undefined; 
     if (req.session.user != undefined) {
       if (usuarioAeditar.usuario == "") {
-        res.render('profile-edit')
-        res.locals.error = errors; 
-        res.render('profile-edit');
+        errors.message = "Nombre de usuario no puede estar vacio";
+        req.session.errors = errors; 
+        res.redirect('/user/edit/id/' + idUsuario);
+      } else if (usuarioAeditar.email == "") {
+        errors.message = "Email de usuario no puede estar vacio";
+        req.session.errors = errors; 
+        res.redirect('/user/edit/id/' + idUsuario);
       } else if (usuarioAeditar.dni == "") {
-        errors.message = "Descripcion de producto no puede estar vacio";
-        res.locals.error = errors; 
-        res.render('profile-edit');
+        errors.message = "DNI de usuario no puede estar vacio";
+        req.session.errors = errors; 
+        res.redirect('/user/edit/id/' + idUsuario);
       } else if (usuarioAeditar.date == "") {
-        errors.message = "Fecha de producto no puede estar vacio";
-        res.locals.error = errors; 
-        res.render('profile-edit')
+        errors.message = "Fecha de usuario no puede estar vacio";
+        req.session.errors = errors; 
+        res.redirect('/user/edit/id/' + idUsuario);
       } else {
         Usuario.findAll()
           .then((result) => {
