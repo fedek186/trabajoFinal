@@ -15,33 +15,29 @@
 				<h2 class="products-title" id="products-title-id">Editar mi perfil</h2>
 			</div>
 		</div>
+		<div>
+			<% 
+				if (locals.errors) { %>
+				<p style="color: red;"> <%- locals.errors.message %> </p>
+			<% } %>
+		</div>
 			<!-- Show the "ultimos" products -->
 			<div class="contenedorPrinProd"> 
 				<form action="" method="POST" enctype="multipart/form-data">
 					<div class="containerProduct">
 						<br>
-						<div class="fotoBox">
-							<label>Foto de perfil</label>
-							<input type="file" name="fotoEditar" value="-">
+						<div class="nombreBox">
+							<p>Nombre de usuario</p>
+							<input type="text" value="<%= usuario. nombre_usuario %>" name="usuario">
 						</div>
 						<br>
 						<div class="nombreBox">
-							<label>Nombre de usuario</label>
-							<input type="text" value=" <%= usuario. nombre_usuario %> " name="usuario">
+							<p>Email</p>
+							<input type="text" value="<%= usuario.email%>" name="email">
 						</div>
 						<br>
 						<div class="nombreBox">
-							<label>Email</label>
-							<input type="text" value=" <%= usuario.email %> " name="email">
-						</div>
-						<br>
-						<div class="nombreBox">
-							<label>Contraseña</label>
-							<input type="password" value="<%= usuario.contrasenia %>" name="contraseña">
-						</div>
-						<br>
-						<div class="nombreBox">
-							<label>DNI</label>
+							<p>DNI</p>
 							<input type="number" value="<%= usuario.dni %>" placeholder="" name="dni">
 						</div>
 						<br>
@@ -49,6 +45,10 @@
 							<p>Fecha de nacimiento</p>
 							<input type="date" value="<%= usuario. fecha_nacimiento %>" name="date">
 						</div> 
+						<div class="fotoBox">
+							<p>Foto de perfil</p>
+							<input type="file" name="fotoEditar" value="-">
+						</div>
 						<br>
 						<div class="nombreBox">
 							<input type="submit" value="Enviar">
