@@ -30,11 +30,11 @@ module.exports = function (sequelize, dataTypes) {
         Seguidor.belongsTo(models.Usuario, {
             as: 'seguidor',
             foreignKey: 'id_seguidor'
-        }) ,
+        });
         Seguidor.belongsTo(models.Usuario, {
             as: 'seguido',
             foreignKey: 'id_seguido'
-        })
+        });
     }
 
     return Seguidor;

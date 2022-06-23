@@ -17,6 +17,7 @@ let indexController = {
           resultados: result,
         })
       })
+      .catch((err) => {console.log(err)});
   } 
 };
 
