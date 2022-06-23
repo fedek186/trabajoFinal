@@ -31,6 +31,7 @@ let userController = {
             return res.render("register");
           } else {
             let usuario = {
+              //* tienen los mismos nombres que en los modelos, porque sus propiedades deben coincidr
               email: info.email,
               nombre_usuario: info.username,
               contrasenia: bcrypt.hashSync(info.password, 10),
