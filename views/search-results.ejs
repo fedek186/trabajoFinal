@@ -20,18 +20,15 @@
 			<div class="resultadosBusqueda">
 				<div class="cardSlideBusqueda">
 					<% for (let i = 0; i < resultado.length ; i++) {%> 
-						<a class="cardBusqueda" href="/product/id/<%= resultado[i].id%>">
-						<div class="img-container">
-							<img class = "productImg" src="/images/products/<%= resultado[i].foto %>" alt="Product">
-						</div>
-						<div class="textContainer">
-							<p class="nameProduct">
-								[<%= resultado[i].nombre%>]
-								<br>
-								Updated By: <%= resultado[i].usuarioRelacionado.nombre_usuario%> 
-							</p>
-						</div>
+						<div class="cardBusqueda">
+						<a href = "/product/id/<%= resultado[i].id%>" class="img-container">
+							<img class = "productImgBusqueda" src="/images/products/<%= resultado[i].foto %>" alt="Product">
 						</a>
+						<div class="textContainer">
+							<p class="nameProduct">[<%= resultado[i].nombre%></p>
+							<a href="/user/<%= resultado[i].usuarioRelacionado.id %> " class="nameProduct">Created by: <%= resultado[i].usuarioRelacionado.nombre_usuario %> </a>
+						</div>
+					</div>
 					<%}%> 
 				</div>
 			</div>

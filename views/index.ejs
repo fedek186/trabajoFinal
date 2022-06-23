@@ -24,13 +24,13 @@
 				<div class="cardSlide">
 					<% for (let i = 0; i < resultados.length ; i++) {%> 
 						<div class="card" href="/product/id/<%= resultados[i].id%>">
-						<a href="/product/id/<%= resultados[i].id%>" class="img-container">
-							<img class = "productImg" src="/images/products/<%= resultados[i].foto %>" alt="Product">
-						</a>
-						<div class="textContainer">
-							<p class="nameProduct">[<%= resultados[i].nombre%>]</p>
-						</div>
-						<a href="/user/<%= resultados[i].usuarioRelacionado.id%>" class="nameProduct">Created By: <%= resultados[i].usuarioRelacionado.nombre_usuario %></a>
+							<a href="/product/id/<%= resultados[i].id%>" class="img-container">
+								<img class = "productImg" src="/images/products/<%= resultados[i].foto %>" alt="Product">
+							</a>
+							<div class="textContainer">
+								<p class="nameProduct">[<%= resultados[i].nombre%>]</p>
+							</div>
+							<a href="/user/<%= resultados[i].usuarioRelacionado.id%>" class="nameProduct">Created By: <%= resultados[i].usuarioRelacionado.nombre_usuario %></a>
 						</div>
 					<%}%> 
 				</div>

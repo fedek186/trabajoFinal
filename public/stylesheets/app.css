@@ -1040,7 +1040,7 @@ textarea.form-input {
 }
 
 .card {
-    margin: 5% 2% 0% 2%;
+    margin: 7% 2% 0% 2%;
     width: 45%;
     height:75%;
     background-color:black;
@@ -1059,6 +1059,8 @@ textarea.form-input {
   height: 100%;
   width: 100%;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .resultadosBusqueda{
@@ -1067,7 +1069,8 @@ textarea.form-input {
   margin: 5% 5% 5% 15% ;
 }
 .cardBusqueda{
-  margin-top: 5%;
+  margin-left: 3%;
+  margin-top: 3%;
   width: 45%;
   height: 80%;
   background-color:black;
@@ -1082,6 +1085,11 @@ textarea.form-input {
     height: 100%;
     width: 100%;
     filter: brightness(60%);
+}
+.productImgBusqueda{
+  height: 400px;
+  width: 100%;
+  filter: brightness(60%);
 }
 
 .textContainer {
