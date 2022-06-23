@@ -46,19 +46,20 @@ let productController = {
     let idProducto = req.params.id;
     let imgProductoEditar = null;
     let errors = {}
+    req.session.errors = undefined; 
     if (req.session.user != undefined) {
       if (productoAeditar.nombre == "") {
-        errors.message = "Nombre de producto no puede estar vacio";
-        res.locals.errors = errors;
-        return res.render('product-edit');
+          errors.message = "Nombre de producto no puede estar vacio";
+          req.session.errors = errors;
+          res.redirect('/product/id/edit/' + idProducto);
       } else if (productoAeditar.desc == "") {
           errors.message = "Descripcion de producto no puede estar vacio";
-          res.locals.error = errors.message;
-          return res.render('product-edit');
+          req.session.errors = errors;
+          res.redirect('/product/id/edit/' + idProducto);
         } else if (productoAeditar.date == "") {
           errors.message = "Fecha de producto no puede estar vacio";
-          res.locals.error = errors.message; 
-          return res.render('product-edit');
+          req.session.errors = errors; 
+          res.redirect('/product/id/edit/' + idProducto);
         } else {
         if (req.file == undefined) {
             producto.update({
@@ -112,7 +113,12 @@ let productController = {
         errors.message = "Fecha de producto no puede estar vacio";
         res.locals.errors = errors;
         return res.render('product-add');
-        } else {
+        }  else if (req.file == undefined) {
+          errors.message = `Hay un error! no ingreso una imagen`;
+          res.locals.errors = errors;
+          return res.render('product-add');
+        }  
+        else {
         imgProducto = req.file.filename;
         producto.create({
           foto: imgProducto,
