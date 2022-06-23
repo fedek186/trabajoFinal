@@ -37,11 +37,11 @@ module.exports = function (sequelize, dataTypes) {
     Comentario.belongsTo(models.Producto, {
         as: 'productoRelacionado',
         foreignKey: 'id_producto'
-    }),
+    });
     Comentario.belongsTo(models.Usuario, {
         as: 'usuarioRelacionado',
         foreignKey: 'id_usuario'
-    })
+    });
 }
 
     return Comentario;

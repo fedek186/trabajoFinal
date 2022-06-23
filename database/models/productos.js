@@ -45,11 +45,11 @@ module.exports = function (sequelize, dataTypes) {
         Producto.hasMany(models.Comentario, {
             as: 'comentarioDeProducto',
             foreignKey: 'id_producto'
-        }) , 
+        }); 
         Producto.belongsTo(models.Usuario, {
             as: 'usuarioRelacionado',
             foreignKey: 'id_usuario'
-        })
+        });
     }
 
     return Producto;
