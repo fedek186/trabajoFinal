@@ -10,7 +10,7 @@ const op = db.Sequelize.Op;
 
 let searchController = {
     index: (req, res) => {
-        let buscada = req.query.search;
+        let buscada = req.query.search; // info del form por metodo get 
         producto.findAll({
                 where: {
                     [op.or]: [
